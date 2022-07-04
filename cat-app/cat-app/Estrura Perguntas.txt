@@ -1,0 +1,41 @@
+ESTRUTURA PERGUNTAS
+------------------------
+low = <=1 (..1)
+
+medium = >1 and <=3 (2..3)
+
+high = >=4 (4..)
+
+search
+
+child_frinedly {resp quiz pergunta 1}
+------------------------------
+Pergunta 1) Tem crianca -> "child_friendly"
+
+0 low
+1 medium 
++1 high
+-------------
+Pergunta 2) Mudancas na vida? (Casa, trabalho etc)   -> "adaptability"
+A nenhuma
+B mais ou menos
+C muita
+
+----------------
+Pergunta 3) Tempo disponivel pro gato -> "social_needs"
+pouco
+medio
+muito
+-----------------
+
+Pergunta 4) Como você costuma se sentir quando esta sozinho(a)?    -> "affection_level"
+muito bem (low)
+indiferente (medium)
+nao gosto (high)
+
+-------------------
+
+Pergunta 5) Voce prefere lugares mais: -> "energy_level"
+calmo (low)
+both (medium)
+agitado (high)
