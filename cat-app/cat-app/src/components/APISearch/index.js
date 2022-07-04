@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export function APISearch() {
+  //fetching the API data
   const [catsBreeds, setCatsBreeds] = useState([]);
   useEffect(() => {
     async function fetchAPIData() {
@@ -16,6 +17,8 @@ export function APISearch() {
     }
     fetchAPIData();
   }, []);
+
+  //filtering out the cats
 
   let filteredCats = [...catsBreeds];
 
@@ -34,13 +37,14 @@ export function APISearch() {
   let att = "child_friendly";
   filterCats("C", att);
   let att2 = "adaptability";
-  filterCats("A", att2);
+  filterCats("C", att2);
   let att3 = "social_needs";
-  filterCats("A", att3);
+  filterCats("C", att3);
   let att4 = "affection_level";
   filterCats("A", att4);
+  ///podemos resolver depois
   let att5 = "energy_level";
-  filterCats("A", att5);
+  filterCats("C", att5);
 
   return (
     <>
