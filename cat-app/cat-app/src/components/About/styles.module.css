@@ -1,0 +1,26 @@
+.about {
+  margin: 25px;
+}
+
+.contributors {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  margin: 35px;
+}
+
+.personalCard {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 1px solid red;
+  border-radius: 12px;
+  width: 350px;
+  margin: 25px;
+  padding: 15px;
+}
+
+.personalCard img {
+  border-radius: 24px;
+  width: 215px;
+}

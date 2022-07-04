@@ -5,20 +5,18 @@ export function Form() {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    question: {
-      question1: "",
-      question2: "",
-      question3: "",
-      question4: "",
-      question5: "",
-    },
+    question1: "",
+    question2: "",
+    question3: "",
+    question4: "",
+    question5: "",
     result: "",
   });
 
   function handleChange(event) {
     setForm({ ...form, [event.target.name]: event.target.value });
+    console.log(form);
   }
-  console.log(form);
 
   //   async function handleSubmit(event) {
   //     event.preventDefault();
@@ -52,29 +50,31 @@ export function Form() {
             value={form.email}
             type="text"
           />
-          <div>
-            <label htmlFor="input-question1">
-              Question 1: Do you have kids?
-            </label>
-            <input
-              id="input-question1"
-              name="question1"
-              onChange={handleChange}
-              value="I don't have kids"
-              type="radio"
-            >
-              I don't have kids
-            </input>
-
-            <input
-              name="question1"
-              onChange={handleChange}
-              value="1"
-              type="radio"
-            >
-              1
-            </input>
-          </div>
+          <p>Question 1: Do you have kids?</p> {" "}
+          <input
+            type="radio"
+            id="A"
+            name="question1"
+            value="A"
+            onChange={handleChange}
+          />
+            <label htmlFor="A">I don't have kids</label>
+          <input
+            type="radio"
+            id="B"
+            name="question1"
+            value="B"
+            onChange={handleChange}
+          />
+            <label htmlFor="B">1</label>
+          <input
+            type="radio"
+            id="C"
+            name="question1"
+            value="C"
+            onChange={handleChange}
+          />
+            <label htmlFor="C">2 ou mais</label>
           {/* <button
             className="btn btn-primary d-grid gap-2"
             type="submit"
