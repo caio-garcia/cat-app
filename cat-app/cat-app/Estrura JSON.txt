@@ -1,0 +1,45 @@
+PROGRAM FLOW
+
+FORM
+
+Carrega os dados da  api e salva na var
+
+depois, pra cada pergunta filtrar a variavel
+
+//algoritmo
+
+api.get() --- mostrar todos as racas de gato
+ funcao para filtrar os gatos com base nas respostas
+
+ ///
+
+Resultado
+
+/////
+JSON FORM  hhttp://ironhack.api/user-answers
+
+{
+    user: "name"
+    e-mail: "email:
+    quesion: {
+        1: a
+        2: B
+        3: C
+        4: A
+        5: a
+    }
+    result: Maine Con
+}
+
+JSON FORM Questions New collection) hhttp://ironhack.api/questions
+
+{
+    Pergunta 1:{
+        question: "aehuaehaue?"
+        option A: asaushaushas
+        option B: auhsaushua 2
+        Option C: asaushaue3
+
+    } 
+
+}
