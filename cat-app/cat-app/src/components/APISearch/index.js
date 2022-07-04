@@ -26,7 +26,7 @@ export function APISearch() {
       } else if (category === "B") {
         return elem[attribute] >= 3;
       } else if (category === "C") {
-        console.log(elem[attribute]);
+        // console.log(elem[attribute]);
         return elem[attribute] >= 4;
       }
     });
@@ -34,13 +34,13 @@ export function APISearch() {
   let att = "child_friendly";
   filterCats("C", att);
   let att2 = "adaptability";
-  filterCats("C", att2);
+  filterCats("A", att2);
   let att3 = "social_needs";
-  filterCats("C", att3);
+  filterCats("A", att3);
   let att4 = "affection_level";
-  filterCats("C", att4);
+  filterCats("A", att4);
   let att5 = "energy_level";
-  filterCats("C", att5);
+  filterCats("A", att5);
 
   return (
     <>
