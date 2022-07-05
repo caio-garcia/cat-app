@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import q1 from "../../assets/pictures/q1.png";
 import q2Video from "../../assets/pictures/q2Video.mp4";
 
@@ -12,7 +12,7 @@ export function Form() {
     question3: "",
     question4: "",
     question5: "",
-    result: "",
+    result: [],
   });
 
   function handleChange(event) {
@@ -32,6 +32,98 @@ export function Form() {
       //   console.log(error);
     }
   }
+
+  //CAT API FETCHING
+  const [catsBreeds, setCatsBreeds] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchAPIData() {
+      try {
+        const response = await axios.get(
+          "https://api.thecatapi.com/v1/breeds/"
+        );
+        setCatsBreeds(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchAPIData();
+  }, []);
+
+  //************** */
+  //API Search
+  //************** */
+  function APISearch1(q1, q2, q3, q4, q5) {
+    //filtering out the cats
+
+    let filteredCats = [...catsBreeds];
+
+    function filterCats(category, attribute) {
+      filteredCats = filteredCats.filter((elem) => {
+        if (category === "A") {
+          return elem[attribute] > 0;
+        } else if (category === "B") {
+          return elem[attribute] >= 3;
+        } else if (category === "C") {
+          // console.log(elem[attribute]);
+          return elem[attribute] >= 4;
+        }
+      });
+      // console.log(filteredCats);
+    }
+    let att = "child_friendly";
+    filterCats(q1, att);
+    let att2 = "adaptability";
+    filterCats(q2, att2);
+    let att3 = "social_needs";
+    filterCats(q3, att3);
+    let att4 = "affection_level";
+    filterCats(q4, att4);
+    let att5 = "energy_level";
+    filterCats(q5, att5);
+
+    const resultado =
+      filteredCats[Math.floor(Math.random() * filteredCats.length)];
+
+    return resultado;
+  }
+
+  function resultCat(e) {
+    e.preventDefault();
+    console.log(form);
+    if (
+      form.question1 &&
+      form.question2 &&
+      form.question3 &&
+      form.question4 &&
+      form.question5
+    ) {
+      console.log(
+        APISearch1(
+          form.question1,
+          form.question2,
+          form.question3,
+          form.question4,
+          form.question5
+        )
+      );
+      setForm({
+        ...form,
+        result: APISearch1(
+          form.question1,
+          form.question2,
+          form.question3,
+          form.question4,
+          form.question5
+        ),
+      });
+    } else {
+      console.log("Error! You must fill in all questions!");
+    }
+  }
+
   return (
     <>
       <div className="d-flex flex-column m-4">
@@ -195,6 +287,13 @@ export function Form() {
             onChange={handleChange}
           />
             <label htmlFor="C">Agitated</label>
+          <button
+            className="btn btn-primary d-grid gap-2"
+            // type="submit"
+            onClick={resultCat}
+          >
+            Results
+          </button>
           <button
             className="btn btn-primary d-grid gap-2"
             type="submit"
