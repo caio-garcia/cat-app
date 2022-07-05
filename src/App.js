@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { About } from "./components/About";
 import { Form } from "./components/Form";
 import { Home } from "./pages/Home";
+import { Breeds } from "./pages/Breeds";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/api-search" element={<APISearch />} />
         <Route path="/about" element={<About />} />
         <Route path="/quiz" element={<Form />} />
+        <Route path="/breeds" element={<Breeds />} />
       </Routes>
       <Footer />
     </div>
