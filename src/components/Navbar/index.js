@@ -6,12 +6,12 @@ export function Navbar() {
     <>
       <div className={styles.navbar}>
         <Link to="/">
-          <h1>Cat or Catch?</h1>
+          <h1>Catch Your Cat</h1>
         </Link>
-        <Link to="/quiz" style={{ textDecoration: "none" }}>
-          <h2>Take the quiz!</h2>
+        <Link to="/quiz">
+          <h2>Take a quiz!</h2>
         </Link>
-        <Link to="/about" style={{ textDecoration: "none" }}>
+        <Link to="/about">
           <h2>About</h2>
         </Link>
       </div>
