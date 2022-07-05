@@ -6,6 +6,7 @@ import { About } from "./components/About";
 import { Form } from "./components/Form";
 import { Home } from "./pages/Home";
 import { Breeds } from "./pages/Breeds";
+import styles from "./App.css";
 import { HappyMatches } from "./pages/HappyMatches";
 import { HappyMatchesDetail } from "./pages/HappyMatchesDetail";
 

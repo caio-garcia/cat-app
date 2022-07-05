@@ -1,4 +1,6 @@
 import home from "../../assets/pictures/home.png";
+import { Link } from "react-router-dom";
+import quizButton from "../../assets/pictures/quizButton.png";
 
 export function Home() {
   return (
@@ -11,6 +13,11 @@ export function Home() {
           alt="question3-logo"
         />{" "}
       </div>
+      <Link to="/quiz">
+        <button>
+          <img src={quizButton} alt="quizButton-logo" />
+        </button>
+      </Link>
     </>
   );
 }
