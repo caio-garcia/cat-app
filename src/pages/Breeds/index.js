@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Breeds() {
+  const [search, setSearch] = useState("");
   const [cats, setCats] = useState([]);
   const [loading, setLoading] = useState(true);
-  console.log(cats);
+  //   console.log(cats);
   useEffect(() => {
     async function fetchAPICats() {
       try {
@@ -13,7 +15,7 @@ export function Breeds() {
         );
         setCats(response.data);
         setLoading(false);
-        console.log(cats);
+        // console.log(cats);
       } catch (error) {
         console.log(error);
       }
@@ -21,37 +23,63 @@ export function Breeds() {
     fetchAPICats();
   }, []);
 
+  // breed search bar
+
   return loading ? (
     <h1>loading...</h1>
   ) : (
     <>
-      {cats.map((currentElement) => {
-        console.log(currentElement.image);
-        return (
-          <>
-            <div key="id" className="card" style={{ width: "18rem" }}>
-              {currentElement.image === undefined ||
-              currentElement.image === {} ? (
-                <span>No image available</span>
-              ) : (
-                <img
-                  src={currentElement.image.url}
-                  className="breed-logo"
-                  alt="breed-logo"
-                />
-              )}
+      <label>Search</label>
+      <input type="text" onChange={(event) => setSearch(event.target.value)} />
+      {cats
 
-              <div className="card-body">
-                <h2 className="card-title">{currentElement.name}</h2>
-                <p className="card-text">{currentElement.description}</p>
-                {/* <a href="#" className="btn btn-primary">
+        .filter((currentBreed) =>
+          currentBreed.name.toLowerCase().includes(search.toLowerCase())
+        )
+
+        .map((currentBreed) => {
+          return (
+            <Link to={`/breeds/${currentBreed.id}`}>
+              <div style={{ display: "flex" }}>
+                {/* <img src={cE.image_url} alt='beer' style={{ width: '100px' }} /> */}
+                <div style={{ flexDirection: "column" }}>
+                  <p>{currentBreed.name}</p>
+                </div>
+              </div>
+            </Link>
+          );
+        })}
+
+      <>
+        {cats.map((currentElement) => {
+          console.log(currentElement.image);
+          return (
+            <>
+              <div key="id" className="card" style={{ width: "18rem" }}>
+                {currentElement.image === undefined ||
+                currentElement.image === {} ? (
+                  <span>No image available</span>
+                ) : (
+                  <img
+                    src={currentElement.image.url}
+                    className="breed-logo"
+                    alt="breed-logo"
+                  />
+                )}
+
+                {/* // breeds card */}
+                <div className="card-body">
+                  <h2 className="card-title">{currentElement.name}</h2>
+                  <p className="card-text">{currentElement.description}</p>
+                  {/* <a href="#" className="btn btn-primary">
                   Go somewhere
                 </a> */}
+                </div>
               </div>
-            </div>
-          </>
-        );
-      })}
+            </>
+          );
+        })}
+      </>
     </>
   );
 }
