@@ -2,8 +2,13 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import q1 from "../../assets/pictures/q1.png";
 import q2Video from "../../assets/pictures/q2Video.mp4";
+import { useNavigate } from "react-router-dom";
 
 export function Form() {
+  const navigate = useNavigate();
+
+  const [solved, setSolved] = useState(false);
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -28,6 +33,7 @@ export function Form() {
         form
       );
       console.log(sent);
+      navigate("/");
     } catch (error) {
       //   console.log(error);
     }
@@ -100,15 +106,6 @@ export function Form() {
       form.question4 &&
       form.question5
     ) {
-      console.log(
-        APISearch1(
-          form.question1,
-          form.question2,
-          form.question3,
-          form.question4,
-          form.question5
-        )
-      );
       setForm({
         ...form,
         result: APISearch1(
@@ -119,6 +116,7 @@ export function Form() {
           form.question5
         ),
       });
+      setSolved(true);
     } else {
       console.log("Error! You must fill in all questions!");
     }
@@ -143,6 +141,7 @@ export function Form() {
             onChange={handleChange}
             value={form.email}
             type="text"
+            required
           />
           <div>
             <p>Question 1: How many kids live in your home?</p> {" "}
@@ -287,20 +286,40 @@ export function Form() {
             onChange={handleChange}
           />
             <label htmlFor="C">Agitated</label>
-          <button
-            className="btn btn-primary d-grid gap-2"
-            // type="submit"
-            onClick={resultCat}
-          >
-            Results
-          </button>
-          <button
-            className="btn btn-primary d-grid gap-2"
-            type="submit"
-            onClick={handleSubmit}
-          >
-            Send my answers
-          </button>
+          <div>
+            {solved ? (
+              <>
+                <h1>{form.result.name}</h1>
+
+                {form.result.image === undefined || form.result.image === {} ? (
+                  <span>No image available</span>
+                ) : (
+                  <img
+                    src={form.result.image.url}
+                    alt={form.result.name}
+                    style={{ width: "200px", "border-radius": "22px" }}
+                  />
+                )}
+                <h2>{form.result.temperament}</h2>
+                <p>{form.result.description}</p>
+                <button
+                  className="btn btn-primary d-grid gap-2"
+                  type="submit"
+                  onClick={handleSubmit}
+                >
+                  Send my answers
+                </button>
+              </>
+            ) : (
+              <button
+                className="btn btn-primary d-grid gap-2"
+                // type="submit"
+                onClick={resultCat}
+              >
+                Results
+              </button>
+            )}
+          </div>
         </form>
       </div>
     </>
