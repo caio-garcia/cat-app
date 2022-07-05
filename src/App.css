@@ -1,0 +1,30 @@
+/* verde: #53a24f
+laranja:#eb903e
+rose:#f7e5c5 */
+
+.button {
+  background: #eb903e;
+  color: white;
+  /* border-style: outset;
+  border-color: ora; */
+  border: none;
+  box-shadow: #ffbd5c 0px 5px;
+  border-radius: 10px;
+  padding: 10px 37px;
+  font-size: 22px;
+  font-weight: bold;
+  align-self: center;
+  margin-bottom: 25px;
+}
+button {
+  border: none;
+  border-radius: 12px;
+  background-color: #f7e5c5;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #f7e5c580;
+}
+button img {
+  border-radius: 12px;
+}
