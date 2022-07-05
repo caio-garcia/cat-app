@@ -7,6 +7,8 @@ import { Form } from "./components/Form";
 import { Home } from "./pages/Home";
 import { Breeds } from "./pages/Breeds";
 import styles from "./App.css";
+import { HappyMatches } from "./pages/HappyMatches";
+import { HappyMatchesDetail } from "./pages/HappyMatchesDetail";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/quiz" element={<Form />} />
         <Route path="/breeds" element={<Breeds />} />
+        <Route path="/happy-matches" element={<HappyMatches />} />
+        <Route path="/happy-matches/:id" element={<HappyMatchesDetail />} />
       </Routes>
       <Footer />
     </div>

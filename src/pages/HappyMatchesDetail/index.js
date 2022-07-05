@@ -1,137 +1,43 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
-import { useState, useEffect } from "react";
 import q1 from "../../assets/pictures/q1.png";
 import q2Video from "../../assets/pictures/q2Video.mp4";
-import { useNavigate } from "react-router-dom";
 
-export function Form() {
-  const navigate = useNavigate();
+export function HappyMatchesDetail() {
+  const { id } = useParams();
 
-  const [solved, setSolved] = useState(false);
-
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    question1: "",
-    question2: "",
-    question3: "",
-    question4: "",
-    question5: "",
-    result: [],
-  });
-
-  function handleChange(event) {
-    setForm({ ...form, [event.target.name]: event.target.value });
-    console.log(form);
-  }
-
-  async function handleSubmit(event) {
-    event.preventDefault();
-    try {
-      const sent = await axios.post(
-        "https://ironrest.herokuapp.com/cat-app-form-collection",
-        form
-      );
-      console.log(sent);
-      navigate("/");
-    } catch (error) {
-      //   console.log(error);
-    }
-  }
-
-  //CAT API FETCHING
-  const [catsBreeds, setCatsBreeds] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [match, setMatch] = useState([]);
 
   useEffect(() => {
-    async function fetchAPIData() {
+    async function fetchMatch() {
       try {
         const response = await axios.get(
-          "https://api.thecatapi.com/v1/breeds/"
+          `https://ironrest.herokuapp.com/cat-app-form-collection/${id}`
         );
-        setCatsBreeds(response.data);
-        setLoading(false);
+        setMatch(response.data);
       } catch (error) {
         console.log(error);
       }
     }
-    fetchAPIData();
+    fetchMatch();
   }, []);
 
-  //************** */
-  //API Search
-  //************** */
-  function APISearch1(q1, q2, q3, q4, q5) {
-    //filtering out the cats
-
-    let filteredCats = [...catsBreeds];
-
-    function filterCats(category, attribute) {
-      filteredCats = filteredCats.filter((elem) => {
-        if (category === "A") {
-          return elem[attribute] > 0;
-        } else if (category === "B") {
-          return elem[attribute] >= 3;
-        } else if (category === "C") {
-          // console.log(elem[attribute]);
-          return elem[attribute] >= 4;
-        }
-      });
-      // console.log(filteredCats);
-    }
-    let att = "child_friendly";
-    filterCats(q1, att);
-    let att2 = "adaptability";
-    filterCats(q2, att2);
-    let att3 = "social_needs";
-    filterCats(q3, att3);
-    let att4 = "affection_level";
-    filterCats(q4, att4);
-    let att5 = "energy_level";
-    filterCats(q5, att5);
-
-    const resultado =
-      filteredCats[Math.floor(Math.random() * filteredCats.length)];
-
-    return resultado;
-  }
-
-  function resultCat(e) {
-    e.preventDefault();
-    console.log(form);
-    if (
-      form.question1 &&
-      form.question2 &&
-      form.question3 &&
-      form.question4 &&
-      form.question5
-    ) {
-      setForm({
-        ...form,
-        result: APISearch1(
-          form.question1,
-          form.question2,
-          form.question3,
-          form.question4,
-          form.question5
-        ),
-      });
-      setSolved(true);
-    } else {
-      console.log("Error! You must fill in all questions!");
-    }
+  function handleChange(event) {
+    setMatch({ ...match, [event.target.name]: event.target.value });
+    console.log(match);
   }
 
   return (
     <>
       <div className="d-flex flex-column m-4">
         <form className="d-flex flex-column">
-          <h2>Let's find your cat. Start here!</h2>
+          <h2>This was {match.name}'s answers! </h2>
           <label htmlFor="input-name">Name:</label>
           <input
             name="name"
             onChange={handleChange}
-            value={form.name}
+            value={match.name}
             type="text"
             required
           />
@@ -139,7 +45,7 @@ export function Form() {
           <input
             name="email"
             onChange={handleChange}
-            value={form.email}
+            value={match.email}
             type="text"
             required
           />
@@ -286,26 +192,27 @@ export function Form() {
             onChange={handleChange}
           />
             <label htmlFor="C">Agitated</label>
-          <div>
+          {/* <div>
             {solved ? (
               <>
-                <h1>{form.result.name}</h1>
+                <h1>{match.result.name}</h1>
 
-                {form.result.image === undefined || form.result.image === {} ? (
+                {match.result.image === undefined ||
+                match.result.image === {} ? (
                   <span>No image available</span>
                 ) : (
                   <img
-                    src={form.result.image.url}
-                    alt={form.result.name}
+                    src={match.result.image.url}
+                    alt={match.result.name}
                     style={{ width: "200px", "border-radius": "22px" }}
                   />
                 )}
-                <h2>{form.result.temperament}</h2>
-                <p>{form.result.description}</p>
+                <h2>{match.result.temperament}</h2>
+                <p>{match.result.description}</p>
                 <button
                   className="btn btn-primary d-grid gap-2"
                   type="submit"
-                  onClick={handleSubmit}
+                  //   onClick={handleSubmit}
                 >
                   Send my answers
                 </button>
@@ -314,12 +221,12 @@ export function Form() {
               <button
                 className="btn btn-primary d-grid gap-2"
                 // type="submit"
-                onClick={resultCat}
+                // onClick={resultCat}
               >
                 Results
               </button>
             )}
-          </div>
+          </div> */}
         </form>
       </div>
     </>
