@@ -1,8 +1,12 @@
 import styles from "./styles.module.css";
+import { Navbar } from "../../components/Navbar";
+import { Footer } from "../../components/Footer";
 
 export function About() {
   return (
     <>
+      <Navbar />
+
       <div className={styles.about}>
         <div className={styles.aboutTitle}>
           <h1>
@@ -34,6 +38,7 @@ export function About() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

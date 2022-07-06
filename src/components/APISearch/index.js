@@ -33,22 +33,25 @@ export function APISearch(q1, q2, q3, q4, q5) {
         return elem[attribute] >= 3;
       } else if (category === "C") {
         // console.log(elem[attribute]);
-        return elem[attribute] >= 5;
+        return elem[attribute] >= 4;
       }
     });
     // console.log(filteredCats);
   }
   let att = "child_friendly";
-  filterCats("A", att);
+  filterCats("C", att);
   let att2 = "adaptability";
-  filterCats("A", att2);
+  filterCats("C", att2);
+
+  //logica ao contrario Q3-Q4
   let att3 = "social_needs";
-  filterCats("A", att3);
+  filterCats("C", att3);
   let att4 = "affection_level";
-  filterCats("A", att4);
+  filterCats("C", att4);
+
   ///podemos resolver depois
   let att5 = "energy_level";
-  filterCats("A", att5);
+  filterCats("C", att5);
 
   // const result = filteredCats[Math.floor(Math.random() * filteredCats.length)];
   // console.log(result.image);

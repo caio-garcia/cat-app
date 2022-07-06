@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
+import { Navbar } from "../../components/Navbar";
+import { Footer } from "../../components/Footer";
 
 export function Breeds() {
   const [search, setSearch] = useState("");
@@ -30,6 +32,8 @@ export function Breeds() {
     <h1>loading...</h1>
   ) : (
     <>
+      <Navbar />
+
       <div className={styles.breeds}>
         <div className={styles.searchBarParent}>
           <div className={styles.searchBar}>
@@ -89,6 +93,7 @@ export function Breeds() {
             })}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
