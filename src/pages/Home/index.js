@@ -22,11 +22,11 @@ export function Home() {
         <Link to="/quiz">
           <img src={quizButton} alt="quizButtonLogo" />
         </Link>
-        <Link to="/breeds">
-          <img src={breedsButton} alt="breedsButtonLogo" />
-        </Link>
         <Link to="/happy-matches">
           <img src={matchesButton} alt="matchesButtonLogo" />
+        </Link>
+        <Link to="/breeds">
+          <img src={breedsButton} alt="breedsButtonLogo" />
         </Link>
         <Link to="/about">
           <img src={aboutButton} alt="aboutButtonLogo" />

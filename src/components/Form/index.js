@@ -8,6 +8,7 @@ import q5 from "../../assets/pictures/q5.png";
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "../Navbar";
 import { Footer } from "../Footer";
+import styles from "../Form/styles.module.css";
 
 export function Form() {
   const navigate = useNavigate();
@@ -130,8 +131,8 @@ export function Form() {
   return (
     <>
       <Navbar />
-      <div className="d-flex flex-column m-4">
-        <form className="d-flex flex-column">
+      <div className={styles.dataDiv}>
+        <form>
           <h2>Let's find your cat. Start here!</h2>
           <label htmlFor="input-name" className="form-label">
             Name:
