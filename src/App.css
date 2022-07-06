@@ -2,11 +2,11 @@
 laranja:#eb903e
 rose:#f7e5c5 */
 
-.button {
+/* .button {
   background: #eb903e;
   color: white;
-  /* border-style: outset;
-  border-color: ora; */
+  border-style: outset;
+  border-color: ora;
   border: none;
   box-shadow: #ffbd5c 0px 5px;
   border-radius: 10px;
@@ -15,16 +15,48 @@ rose:#f7e5c5 */
   font-weight: bold;
   align-self: center;
   margin-bottom: 25px;
+} */
+/* .beige-button {
+  border: none;
+  border-radius: 12px;
+  background-color: #f7e5c5;
+  cursor: pointer;
+  size: 417px 79px;
 }
-button {
+.beige-button:hover {
+  background-color: #f7e5c580;
+}
+.orange-button {
   border: none;
   border-radius: 12px;
   background-color: #f7e5c5;
   cursor: pointer;
 }
-button:hover {
+.orange-button:hover {
   background-color: #f7e5c580;
-}
-button img {
+} */
+img {
   border-radius: 12px;
+  width: 250px;
+  height: 50px;
+}
+.cat-logo-div {
+  background-color: #53a24f;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+}
+.logo-logo-div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.button-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
