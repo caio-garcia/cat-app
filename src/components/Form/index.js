@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import q1 from "../../assets/pictures/q1.png";
-import q2Video from "../../assets/pictures/q2Video.mp4";
+import q2 from "../../assets/pictures/q2.png";
 import q3 from "../../assets/pictures/q3.png";
 import q4 from "../../assets/pictures/q4.png";
 import q5 from "../../assets/pictures/q5.png";
@@ -188,11 +188,12 @@ export function Form() {
           <p>
             Question 2: How often does your life change (home, work, travel)?
           </p>
-           {" "}
-          <video style={{ width: 500, height: 400, margin: 10 }} autoPlay>
-            <source src={q2Video} type="video/mp4" />
-            Sorry, probably your browser doesn't support this tag.
-          </video>
+          <img
+            style={{ width: 500, height: 450, margin: 10 }}
+            className="question-logo"
+            src={q2}
+            alt="question2-logo"
+          />
           <input
             type="radio"
             id="A"
