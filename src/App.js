@@ -13,7 +13,7 @@ import { HappyMatchesDetail } from "./pages/HappyMatchesDetail";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/api-search" element={<APISearch />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/happy-matches" element={<HappyMatches />} />
         <Route path="/happy-matches/:id" element={<HappyMatchesDetail />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

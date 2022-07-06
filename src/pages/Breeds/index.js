@@ -38,16 +38,15 @@ export function Breeds() {
         )
 
         .map((currentBreed) => {
-          return (
-            <Link to={`/breeds/${currentBreed.id}`}>
+          return {
+            /* <Link to={`/breeds/${currentBreed.id}`}>
               <div style={{ display: "flex" }}>
-                {/* <img src={cE.image_url} alt='beer' style={{ width: '100px' }} /> */}
                 <div style={{ flexDirection: "column" }}>
                   <p>{currentBreed.name}</p>
                 </div>
               </div>
-            </Link>
-          );
+            </Link> */
+          };
         })}
 
       <>
