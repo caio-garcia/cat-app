@@ -12,33 +12,29 @@ import styles from "./styles.module.css";
 export function Home() {
   return (
     <>
-      <div>
-        <img
-          className={styles.catLogoDiv}
-          //   style={{ width: "270", height: "190" }}
-          src={catHome}
-          alt="catLogo"
-        />
+      <div className={styles.catLogoDiv}>
+        <img src={catHome} alt="catLogo" />
       </div>
       <div className={styles.logoDiv}>
-        <img className={"catLogoLogo"} src={logo} alt="logoLogo" />
+        <img src={logo} alt="logoLogo" />
       </div>
-      <div className={styles.buttonDiv}></div>
-      <Link to="/quiz">
-        <img src={quizButton} alt="quizButtonLogo" />
-      </Link>
-      <Link to="/breeds">
-        <img src={breedsButton} alt="breedsButtonLogo" />
-      </Link>
-      <Link to="/happy-matches">
-        <img src={matchesButton} alt="matchesButtonLogo" />
-      </Link>
-      <Link to="/about">
-        <img src={aboutButton} alt="aboutButtonLogo" />
-      </Link>
-      {/* <Link to="/about"> */}
-      <img src={ourPetsButton} alt="ourPetsButtonLogo" />
-      {/* </Link> */}
+      <div className={styles.buttonDiv}>
+        <Link to="/quiz">
+          <img src={quizButton} alt="quizButtonLogo" />
+        </Link>
+        <Link to="/happy-matches">
+          <img src={matchesButton} alt="matchesButtonLogo" />
+        </Link>
+        <Link to="/breeds">
+          <img src={breedsButton} alt="breedsButtonLogo" />
+        </Link>
+        <Link to="/about">
+          <img src={aboutButton} alt="aboutButtonLogo" />
+        </Link>
+        {/* <Link to="/about"> */}
+        <img src={ourPetsButton} alt="ourPetsButtonLogo" />
+        {/* </Link> */}
+      </div>
     </>
   );
 }

@@ -3,27 +3,24 @@
     background-color: #53a24f;
   }
   /* img {
-    width: 270;
-    height: 192;
-  } */
-  /* .container {
-    width: auto;
-    background-color: #53a24f;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    width: 270px;
+    height: 192px;
   } */
   .catLogoDiv img {
     width: 270px;
     height: 192px;
-    background-color: red;
   }
-  .catLogoDiv {
-    width: 270px;
-    height: 192px;
+  .logoDiv img {
+    width: 380px;
+    height: 250px;
   }
-  .logoDiv {
-    width: 270px;
-    height: 192px;
+  .buttonDiv img {
+    width: 300px;
+    height: 60px;
+  }
+  .buttonDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

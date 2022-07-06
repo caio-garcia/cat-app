@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import q1 from "../../assets/pictures/q1.png";
-import q2Video from "../../assets/pictures/q2Video.mp4";
+import q2 from "../../assets/pictures/q2.png";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
 
@@ -219,10 +219,12 @@ export function HappyMatchesDetail() {
             Question 2: How often does your life change (home, work, travel)?
           </p>
            {" "}
-          <video style={{ width: 500, height: 400, margin: 10 }} autoPlay>
-            <source src={q2Video} type="video/mp4" />
-            Sorry, probably your browser doesn't support this tag.
-          </video>
+          <img
+            style={{ width: 500, height: 450, margin: 10 }}
+            className="question-logo"
+            src={q2}
+            alt="question2-logo"
+          />
           <input
             type="radio"
             id="A"
