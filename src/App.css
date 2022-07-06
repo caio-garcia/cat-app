@@ -2,20 +2,27 @@
 laranja:#eb903e
 rose:#f7e5c5 */
 
-/* .button {
-  background: #eb903e;
+.button {
+  background: #ffbd5c;
   color: white;
   border-style: outset;
   border-color: ora;
   border: none;
-  box-shadow: #ffbd5c 0px 5px;
+  box-shadow: #eb903e 0px 5px;
   border-radius: 10px;
   padding: 10px 37px;
   font-size: 22px;
   font-weight: bold;
   align-self: center;
   margin-bottom: 25px;
-} */
+}
+.button:hover {
+  background-color: #53a24f;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
 /* .beige-button {
   border: none;
   border-radius: 12px;

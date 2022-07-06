@@ -29,30 +29,19 @@ export function Home() {
           />{" "}
           <div className="button-div">
             <Link to="/quiz">
-              {/* <button className="beige-buttom"> */}
               <img src={quizButton} alt="quizButton-logo" />
-              {/* </button> */}
             </Link>
             <Link to="/breeds">
-              {/* <button className="beige-buttom"> */}
               <img src={breedsButton} alt="breedsButton-logo" />
-              {/* </button> */}
             </Link>
             <Link to="/happy-matches">
-              {/* <button className="orange-buttom"> */}
               <img src={matchesButton} alt="matchesButton-logo" />
-              {/* </button> */}
             </Link>
-
             <Link to="/about">
-              {/* <button className="orange-buttom"> */}
               <img src={aboutButton} alt="aboutButton-logo" />
-              {/* </button> */}
             </Link>
             {/* <Link to="/about"> */}
-            {/* <button className="beige-buttom"> */}
             <img src={ourPetsButton} alt="ourPetsButton-logo" />
-            {/* </button> */}
             {/* </Link> */}
           </div>
         </div>
