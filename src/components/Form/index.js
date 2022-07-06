@@ -131,12 +131,10 @@ export function Form() {
   return (
     <>
       <Navbar />
-      <div className={styles.dataDiv}>
-        <form>
+      <div>
+        <form className={styles.dataDiv}>
           <h2>Let's find your cat. Start here!</h2>
-          <label htmlFor="input-name" className="form-label">
-            Name:
-          </label>
+          <label htmlFor="input-name">Name:</label>
           <input
             name="name"
             onChange={handleChange}
@@ -153,14 +151,8 @@ export function Form() {
             required
           />
           <div>
-            <p>Question 1: How many kids live in your home?</p> {" "}
-            <img
-              style={{ width: 500, height: 450, margin: 10 }}
-              className="question-logo"
-              src={q1}
-              alt="question1-logo"
-            />{" "}
-            <br></br>
+            <p>Question 1: How many kids live in your home?</p>
+            <img className="questionLogo" src={q1} alt="question1-logo" />
             <input
               type="radio"
               id="A"
@@ -189,12 +181,7 @@ export function Form() {
           <p>
             Question 2: How often does your life change (home, work, travel)?
           </p>
-          <img
-            style={{ width: 500, height: 450, margin: 10 }}
-            className="question-logo"
-            src={q2}
-            alt="question2-logo"
-          />
+          <img className="question-logo" src={q2} alt="question2-logo" />
           <input
             type="radio"
             id="A"
@@ -221,13 +208,7 @@ export function Form() {
             <label htmlFor="C">Fequently</label>
           <p>
             Question 3: How much time do you have to spend with your cat?
-          </p> {" "}
-          <img
-            style={{ width: 500, height: 450, margin: 10 }}
-            className="question-logo"
-            src={q3}
-            alt="question3-logo"
-          />{" "}
+          </p>  <img className="question-logo" src={q3} alt="question3-logo" />{" "}
           <input
             type="radio"
             id="A"
@@ -253,12 +234,7 @@ export function Form() {
           />
             <label htmlFor="C">More then two hours</label>
           <p>Question 4: How do you usually feel when you are alone?</p> {" "}
-          <img
-            style={{ width: 500, height: 450, margin: 10 }}
-            className="question-logo"
-            src={q4}
-            alt="question4-logo"
-          />{" "}
+          <img className="question-logo" src={q4} alt="question4-logo" />{" "}
           <input
             type="radio"
             id="A"
@@ -284,12 +260,7 @@ export function Form() {
           />
             <label htmlFor="C">I don't like to be alone</label>
           <p>Question 5: What kind of environment do you prefer?</p> {" "}
-          <img
-            style={{ width: 500, height: 450, margin: 10 }}
-            className="question-logo"
-            src={q5}
-            alt="question5-logo"
-          />{" "}
+          <img className="question-logo" src={q5} alt="question5-logo" />{" "}
           <input
             type="radio"
             id="A"
