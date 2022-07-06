@@ -6,6 +6,8 @@ import q3 from "../../assets/pictures/q3.png";
 import q4 from "../../assets/pictures/q4.png";
 import q5 from "../../assets/pictures/q5.png";
 import { useNavigate } from "react-router-dom";
+import { Navbar } from "../Navbar";
+import { Footer } from "../Footer";
 
 export function Form() {
   const navigate = useNavigate();
@@ -127,6 +129,7 @@ export function Form() {
 
   return (
     <>
+      <Navbar />
       <div className="d-flex flex-column m-4">
         <form className="d-flex flex-column">
           <h2>Let's find your cat. Start here!</h2>
@@ -344,6 +347,7 @@ export function Form() {
           )}
         </form>
       </div>
+      <Footer />
     </>
   );
 }
