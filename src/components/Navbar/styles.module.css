@@ -34,7 +34,8 @@ beige: #f7e5c5 */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5px;
+    align-content: center;
+    gap: 15px;
     font-size: 0.2em;
     /* margin: 15px; */
   }
@@ -44,3 +45,5 @@ beige: #f7e5c5 */
     font-size: 0.1em;
   }
 }
+
+/* #b6dcb6 */

@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import catHome from "../../assets/pictures/cat (1080 × 768 px).png";
-import logo from "../../assets/pictures/CatchYourCatComplete.png";
+import logo from "../../assets/pictures/CatchYourCatBlack(1080 × 768 px) (5).png";
 
 export function Navbar() {
   return (
     <>
       <div className={styles.navbar}>
-        <div className={styles.navbarImages}>
-          <Link to="/">
-            {/* <img src={catHome} /> */}
+        <Link to="/">
+          <div className={styles.navbarImages}>
+            <img src={catHome} />
             <img src={logo} />
-          </Link>
-        </div>
+          </div>
+        </Link>
+
         <div className={styles.navbarButtons}>
           <Link to="/quiz">
             <button>Take a quiz!</button>
