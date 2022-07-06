@@ -2,6 +2,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import q1 from "../../assets/pictures/q1.png";
 import q2Video from "../../assets/pictures/q2Video.mp4";
+import q3 from "../../assets/pictures/q3.png";
+import q4 from "../../assets/pictures/q4.png";
+import q5 from "../../assets/pictures/q5.png";
 import { useNavigate } from "react-router-dom";
 
 export function Form() {
@@ -127,7 +130,9 @@ export function Form() {
       <div className="d-flex flex-column m-4">
         <form className="d-flex flex-column">
           <h2>Let's find your cat. Start here!</h2>
-          <label htmlFor="input-name">Name:</label>
+          <label htmlFor="input-name" className="form-label">
+            Name:
+          </label>
           <input
             name="name"
             onChange={handleChange}
@@ -147,9 +152,9 @@ export function Form() {
             <p>Question 1: How many kids live in your home?</p> {" "}
             <img
               style={{ width: 500, height: 450, margin: 10 }}
-              className="question3-logo"
+              className="question-logo"
               src={q1}
-              alt="question3-logo"
+              alt="question1-logo"
             />{" "}
             <br></br>
             <input
@@ -212,6 +217,12 @@ export function Form() {
           <p>
             Question 3: How much time do you have to spend with your cat?
           </p> {" "}
+          <img
+            style={{ width: 500, height: 450, margin: 10 }}
+            className="question-logo"
+            src={q3}
+            alt="question3-logo"
+          />{" "}
           <input
             type="radio"
             id="A"
@@ -237,6 +248,12 @@ export function Form() {
           />
             <label htmlFor="C">More then two hours</label>
           <p>Question 4: How do you usually feel when you are alone?</p> {" "}
+          <img
+            style={{ width: 500, height: 450, margin: 10 }}
+            className="question-logo"
+            src={q4}
+            alt="question4-logo"
+          />{" "}
           <input
             type="radio"
             id="A"
@@ -261,7 +278,13 @@ export function Form() {
             onChange={handleChange}
           />
             <label htmlFor="C">I don't like to be alone</label>
-          <p>Question 4: What kind of environment do you prefer?</p> {" "}
+          <p>Question 5: What kind of environment do you prefer?</p> {" "}
+          <img
+            style={{ width: 500, height: 450, margin: 10 }}
+            className="question-logo"
+            src={q5}
+            alt="question5-logo"
+          />{" "}
           <input
             type="radio"
             id="A"
@@ -286,40 +309,39 @@ export function Form() {
             onChange={handleChange}
           />
             <label htmlFor="C">Agitated</label>
-          <div>
-            {solved ? (
-              <>
-                <h1>{form.result.name}</h1>
+          <div></div>
+          {solved ? (
+            <>
+              <h1>{form.result.name}</h1>
 
-                {form.result.image === undefined || form.result.image === {} ? (
-                  <span>No image available</span>
-                ) : (
-                  <img
-                    src={form.result.image.url}
-                    alt={form.result.name}
-                    style={{ width: "200px", "border-radius": "22px" }}
-                  />
-                )}
-                <h2>{form.result.temperament}</h2>
-                <p>{form.result.description}</p>
-                <button
-                  className="btn btn-primary d-grid gap-2"
-                  type="submit"
-                  onClick={handleSubmit}
-                >
-                  Send my answers
-                </button>
-              </>
-            ) : (
+              {form.result.image === undefined || form.result.image === {} ? (
+                <span>No image available</span>
+              ) : (
+                <img
+                  src={form.result.image.url}
+                  alt={form.result.name}
+                  style={{ width: "200px", "border-radius": "22px" }}
+                />
+              )}
+              <h2>{form.result.temperament}</h2>
+              <p>{form.result.description}</p>
               <button
                 className="btn btn-primary d-grid gap-2"
-                // type="submit"
-                onClick={resultCat}
+                type="submit"
+                onClick={handleSubmit}
               >
-                Results
+                Send my answers
               </button>
-            )}
-          </div>
+            </>
+          ) : (
+            <button
+              className="button"
+              // type="submit"
+              onClick={resultCat}
+            >
+              Results
+            </button>
+          )}
         </form>
       </div>
     </>

@@ -38,29 +38,15 @@ export function Breeds() {
         )
 
         .map((currentBreed) => {
-          return (
-            <>
-              <div key="id" className="card" style={{ width: "18rem" }}>
-                {currentBreed.image === undefined ||
-                currentBreed.image === {} ? (
-                  <span>No image available</span>
-                ) : (
-                  <img
-                    src={currentBreed.image.url}
-                    className="breed-logo"
-                    alt="breed-logo"
-                  />
-                )}
-                <div className="card-body">
-                  <h2 className="card-title">{currentBreed.name}</h2>
-                  <p className="card-text">{currentBreed.description}</p>
-                  <a href="#" className="btn btn-primary">
-                    Go somewhere
-                  </a>
+          return {
+            /* <Link to={`/breeds/${currentBreed.id}`}>
+              <div style={{ display: "flex" }}>
+                <div style={{ flexDirection: "column" }}>
+                  <p>{currentBreed.name}</p>
                 </div>
               </div>
-            </>
-          );
+            </Link> */
+          };
         })}
 
       {/* <>
