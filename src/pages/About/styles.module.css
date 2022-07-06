@@ -3,14 +3,14 @@
     margin: 25px;
     background-color: #f7e5c5;
     color: #eb903e;
-    height: 920px;
+    /* height: 920px; */
     border-radius: 25px;
     font-family: Gaegu;
   }
 
   .aboutTitle {
     margin: 35px;
-    padding: 25px;
+    padding: 15px;
     /* background-color: #53a24f; */
   }
 

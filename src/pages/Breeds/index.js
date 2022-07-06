@@ -44,15 +44,7 @@ export function Breeds() {
             />
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "60px",
-            justifyContent: "space-around",
-            margin: "95px",
-          }}
-        >
+        <div className={styles.cardsContainer}>
           {cats
             .filter((currentBreed) =>
               currentBreed.name.toLowerCase().includes(search.toLowerCase())
@@ -60,34 +52,29 @@ export function Breeds() {
             .map((currentBreed) => {
               return (
                 <>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      width: "250px",
-                      margin: "15px",
-                    }}
-                  >
-                    <div key="id" className={styles.card}>
-                      {currentBreed.image === undefined ||
-                      currentBreed.image === {} ? (
-                        <span>No image available</span>
-                      ) : (
-                        <img
-                          src={currentBreed.image.url}
-                          className="breed-logo"
-                          alt="breed-logo"
-                          style={{ width: "auto", height: "150px" }}
-                        />
-                      )}
-                      <div className="card-body">
-                        <h2 className="card-title">{currentBreed.name}</h2>
-                        <h4>{currentBreed.origin}</h4>
-                        <p className="card-text">{currentBreed.description}</p>
-                      </div>
+                  {/* <div className={styles.cardsContainer}> */}
+                  <div key="id" className={styles.card}>
+                    {currentBreed.image === undefined ||
+                    currentBreed.image === {} ? (
+                      <span>No image available</span>
+                    ) : (
+                      <img
+                        src={currentBreed.image.url}
+                        className="breed-logo"
+                        alt="breed-logo"
+                        // style={{ width: "auto", height: "150px" }}
+                      />
+                    )}
+                    <div className="card-body">
+                      <h2 className="card-title">{currentBreed.name}</h2>
+                      <h4>{currentBreed.origin}</h4>
+                      <h4>
+                        <strong>{currentBreed.temperament}</strong>
+                      </h4>
+                      <p className="card-text">{currentBreed.description}</p>
                     </div>
                   </div>
+                  {/* </div> */}
                 </>
               );
             })}

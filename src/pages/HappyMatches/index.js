@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
+import styles from "./styles.module.css";
 
 export function HappyMatches() {
   const [matches, setMatches] = useState([]);
@@ -29,17 +30,25 @@ export function HappyMatches() {
   ) : (
     <>
       <Navbar />
-      <ul>
+      <ul style={{ listStyle: "none", marginRight: "20px" }}>
         {matches.map((currElem) => {
           return (
             <li key={currElem._id}>
-              <h2>{currElem.name}</h2>
-              <p>{currElem.email}</p>
-              <h3>{currElem.result.name}</h3>
-              <span>{currElem.result.temperament}</span>
-              <Link to={`/happy-matches/${currElem._id}`}>
-                <button>Details</button>
-              </Link>
+              <div className={styles.card}>
+                <h2>{currElem.name}</h2>
+                <p>{currElem.email}</p>
+                <span>
+                  Cat Match:{" "}
+                  <strong style={{ "font-weight": "900" }}>
+                    {currElem.result.name}
+                  </strong>
+                </span>
+                <h3>{currElem.result.temperament}</h3>
+                <br />
+                <Link to={`/happy-matches/${currElem._id}`}>
+                  <button>Details</button>
+                </Link>
+              </div>
             </li>
           );
         })}
