@@ -1,0 +1,37 @@
+.breeds {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 45px;
+  background-color: #53a24f;
+  border-radius: 12px;
+  color: #f7e5c5;
+}
+
+.searchBarParent {
+  position: fixed;
+  /* margin: 45px; */
+  left: 45%;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1.6em;
+  font-weight: bolder;
+}
+
+.searchBar input {
+  width: 350px;
+  height: 35px;
+  font-size: 1.2em;
+  border: 1px solid #f7e5c5;
+  box-shadow: 2px 3px #f7e5c5;
+  border-radius: 18px;
+}
+
+.card {
+}

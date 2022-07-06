@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import styles from "./styles.module.css";
 
 export function Breeds() {
   const [search, setSearch] = useState("");
@@ -29,54 +30,65 @@ export function Breeds() {
     <h1>loading...</h1>
   ) : (
     <>
-      <label>Search</label>
-      <input type="text" onChange={(event) => setSearch(event.target.value)} />
-      {cats
-
-        .filter((currentBreed) =>
-          currentBreed.name.toLowerCase().includes(search.toLowerCase())
-        )
-
-        .map((currentBreed) => {
-          return {
-            /* <Link to={`/breeds/${currentBreed.id}`}>
-              <div style={{ display: "flex" }}>
-                <div style={{ flexDirection: "column" }}>
-                  <p>{currentBreed.name}</p>
-                </div>
-              </div>
-            </Link> */
-          };
-        })}
-
-      {/* <>
-        {cats.map((currentElement) => {
-          console.log(currentElement.image);
-          return (
-            <>
-              <div key="id" className="card" style={{ width: "18rem" }}>
-                {currentElement.image === undefined ||
-                currentElement.image === {} ? (
-                  <span>No image available</span>
-                ) : (
-                  <img
-                    src={currentElement.image.url}
-                    className="breed-logo"
-                    alt="breed-logo"
-                  />
-                )}
-                <div className="card-body">
-                  <h2 className="card-title">{currentElement.name}</h2>
-                  <p className="card-text">{currentElement.description}</p>
-                  <a href="#" className="btn btn-primary">
-                  Go somewhere
-                </a>
-                </div>
-              </div>
-            </>
-          );
-        })}
-      </> */}
+      <div className={styles.breeds}>
+        <div className={styles.searchBarParent}>
+          <div className={styles.searchBar}>
+            <label>Search</label>
+            <input
+              type="text"
+              onChange={(event) => setSearch(event.target.value)}
+            />
+          </div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "60px",
+            justifyContent: "space-around",
+            margin: "95px",
+          }}
+        >
+          {cats
+            .filter((currentBreed) =>
+              currentBreed.name.toLowerCase().includes(search.toLowerCase())
+            )
+            .map((currentBreed) => {
+              return (
+                <>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      width: "250px",
+                      margin: "15px",
+                    }}
+                  >
+                    <div key="id" className={styles.card}>
+                      {currentBreed.image === undefined ||
+                      currentBreed.image === {} ? (
+                        <span>No image available</span>
+                      ) : (
+                        <img
+                          src={currentBreed.image.url}
+                          className="breed-logo"
+                          alt="breed-logo"
+                          style={{ width: "auto", height: "150px" }}
+                        />
+                      )}
+                      <div className="card-body">
+                        <h2 className="card-title">{currentBreed.name}</h2>
+                        <h4>{currentBreed.origin}</h4>
+                        <p className="card-text">{currentBreed.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              );
+            })}
+        </div>
+      </div>
     </>
   );
 }
