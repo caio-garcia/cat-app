@@ -8,9 +8,9 @@ export function Navbar() {
     <>
       <div className={styles.navbar}>
         <div className={styles.navbarImages}>
-          <img src={logo} />
           <Link to="/">
-            <img src={catHome} />
+            {/* <img src={catHome} /> */}
+            <img src={logo} />
           </Link>
         </div>
         <div className={styles.navbarButtons}>

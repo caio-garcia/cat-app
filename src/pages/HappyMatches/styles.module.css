@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  border-radius: 12px;
+  box-shadow: 2px 3px 1px #f7e5c5, 2px -3px 1px #f7e5c5;
+  gap: 8px;
+  margin: 12px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.card h2 {
+  color: white;
+}
