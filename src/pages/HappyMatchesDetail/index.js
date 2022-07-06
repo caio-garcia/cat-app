@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import q1 from "../../assets/pictures/q1.png";
 import q2Video from "../../assets/pictures/q2Video.mp4";
+import { Navbar } from "../../components/Navbar";
+import { Footer } from "../../components/Footer";
 
 export function HappyMatchesDetail() {
   const { id } = useParams();
@@ -156,6 +158,7 @@ export function HappyMatchesDetail() {
     </>
   ) : editMode ? (
     <>
+      <Navbar />
       <div>
         <button onClick={handleDelete}>Delete</button>
       </div>
@@ -358,9 +361,11 @@ export function HappyMatchesDetail() {
           </div>
         </form>
       </div>
+      <Footer />
     </>
   ) : (
     <>
+      <Navbar />
       <div>
         <button onClick={turnEditMode}>Edit</button>
         <button onClick={handleDelete}>Delete</button>
@@ -370,6 +375,7 @@ export function HappyMatchesDetail() {
         <h3>Perfect Cat: {match.result.name}</h3>
         <span>Perfect because: {match.result.temperament}</span>
       </div>
+      <Footer />
     </>
   );
 }

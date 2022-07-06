@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { APISearch } from "./components/APISearch";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import { About } from "./components/About";
+import { About } from "./pages/About";
 import { Form } from "./components/Form";
 import { Home } from "./pages/Home";
 import { Breeds } from "./pages/Breeds";
@@ -13,8 +13,9 @@ import { HappyMatchesDetail } from "./pages/HappyMatchesDetail";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
       <Routes>
+        <Route path="/nav-bar" element={<Navbar />} />
+        <Route path="/footer" element={<Footer />} />
         <Route path="/" element={<Home />} />
         <Route path="/api-search" element={<APISearch />} />
         <Route path="/about" element={<About />} />
@@ -23,7 +24,6 @@ function App() {
         <Route path="/happy-matches" element={<HappyMatches />} />
         <Route path="/happy-matches/:id" element={<HappyMatchesDetail />} />
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 }

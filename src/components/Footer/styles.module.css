@@ -1,13 +1,23 @@
-footer {
-  display: flex;
-  gap: 90px;
-  justify-content: space-between;
-  margin: 50px;
-  padding: 15px;
-  border: 1px solid red;
-  border-radius: 12px;
-}
+/* verde: #53a24f
+laranja:#eb903e
+rose:#f7e5c5
+beige: #f7e5c5 */
 
-footer span {
-  padding-top: 25px;
+@media only screen and (max-width: 400px) {
+  footer {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f7e5c559;
+    border: 1px solid #f7e5c5;
+    border-radius: 12px;
+    box-shadow: 2px 3px #f7e5c5;
+    font-size: 0.4em;
+  }
+
+  /* footer span {
+    padding-top: 25px;
+  } */
 }

@@ -1,3 +1,25 @@
 /* verde: #53a24f
 laranja:#eb903e
-rose:#f7e5c5 */
+rose:#f7e5c5
+beige: #f7e5c5 */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  background-color: #f7e5c5;
+  color: black;
+  border: 1px solid #f7e5c5;
+  border-radius: 12px;
+  width: 100px;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #eb903e;
+  color: #f7e5c5;
+  border: 1px solid #eb903e;
+}

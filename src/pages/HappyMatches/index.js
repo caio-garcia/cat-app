@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Navbar } from "../../components/Navbar";
+import { Footer } from "../../components/Footer";
 
 export function HappyMatches() {
   const [matches, setMatches] = useState([]);
@@ -26,6 +28,7 @@ export function HappyMatches() {
     <h1>Loading...</h1>
   ) : (
     <>
+      <Navbar />
       <ul>
         {matches.map((currElem) => {
           return (
@@ -41,6 +44,7 @@ export function HappyMatches() {
           );
         })}
       </ul>
+      <Footer />
     </>
   );
 }
