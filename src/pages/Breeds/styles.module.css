@@ -11,7 +11,10 @@
 .searchBarParent {
   position: fixed;
   /* margin: 45px; */
-  left: 45%;
+  /* left: 45%; */
+  width: 100%;
+  background-color: #53a24f;
+  padding-top: 65px;
 }
 
 .searchBar {
