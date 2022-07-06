@@ -4,11 +4,15 @@ export function About() {
   return (
     <>
       <div className={styles.about}>
-        <h1>The Catch or Cat Project</h1>
-        <span>
-          This project was developed as part of Ironhack's full-time Web
-          Develpment bootcamp.
-        </span>
+        <div className={styles.aboutTitle}>
+          <h1>
+            The <i>Catch Your Cat</i> Project
+          </h1>
+          <h4>
+            This project was developed as part of Ironhack's full-time Web
+            Develpment bootcamp.
+          </h4>
+        </div>
         <div className={styles.contributors}>
           <div className={styles.personalCard}>
             <img
@@ -24,7 +28,9 @@ export function About() {
               alt="Tathy Max"
             />
             <h2>Tathy Max</h2>
-            <span></span>
+            <span>
+              Former Veterinarian now helping out animals trhough technology.
+            </span>
           </div>
         </div>
       </div>
