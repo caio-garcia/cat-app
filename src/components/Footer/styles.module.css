@@ -3,7 +3,7 @@ laranja:#eb903e
 rose:#f7e5c5
 beige: #f7e5c5 */
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   footer {
     display: flex;
     gap: 12px;
@@ -21,11 +21,11 @@ beige: #f7e5c5 */
     padding-top: 25px;
   } */
 }
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+/* @media only screen and (min-width: 481px) and (max-width: 768px) {
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
 }
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
-}
-@media only screen and (max-width: 1201px) {
+} */
+@media screen and (min-width: 481px) and (max-width: 1201px) {
 }

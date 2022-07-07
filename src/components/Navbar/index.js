@@ -9,8 +9,7 @@ export function Navbar() {
       <div className={styles.navbar}>
         <Link to="/">
           <div className={styles.navbarImages}>
-            <img src={catLogoNavbar} />
-            {/* <img src={logo} /> */}
+            <img src={catLogoNavbar} alt="catLogoNavbar" />
           </div>
         </Link>
 
@@ -27,9 +26,6 @@ export function Navbar() {
           <Link to="/about">
             <button>Our Team</button>
           </Link>
-          {/* <Link to="/about">
-            <button>Our Pets</button>
-          </Link> */}
         </div>
       </div>
     </>
