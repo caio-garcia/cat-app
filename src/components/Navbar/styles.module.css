@@ -9,40 +9,48 @@ beige: #f7e5c5 */
     display: flex;
     gap: 45px;
     justify-content: space-between;
-    margin: 5px;
-    padding: 5px;
-    /* padding-bottom: 55px; */
+    margin: 10px;
+    margin-bottom: 0px;
+    padding: 10px 0px;
     border: 1px solid #f7e5c5;
     border-radius: 12px;
     background-color: #efb17b;
     font-size: 0.2em;
     box-shadow: 2px 3px #f7e5c5;
-    /* width: 400px; */
   }
   .navbarImages {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    height: 80px;
+    width: 90px;
+    margin-left: 20px;
   }
 
   .navbar img {
     margin: 15px;
-    width: 100px;
-    height: 80px;
+    margin-right: 20px;
+    width: 170px;
+    position: relative;
+    bottom: 10px;
+    right: 20px;
   }
   .navbarButtons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
-    gap: 15px;
+    margin-left: 30px;
+    gap: 10px;
     font-size: 0.2em;
     /* margin: 15px; */
   }
 
   .navbar button {
-    width: 75px;
-    font-size: 0.1em;
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+    font-weight: bold;
   }
 }
 

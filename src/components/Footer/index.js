@@ -6,11 +6,19 @@ export function Footer() {
       <footer>
         <h2>
           Developed by{" "}
-          <a href="https://github.com/Tathy-Max" target="_blank">
+          <a
+            href="https://github.com/Tathy-Max"
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
             Tathy
           </a>{" "}
           and{" "}
-          <a href="https://github.com/caio-garcia/" target="_blank">
+          <a
+            href="https://github.com/caio-garcia/"
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
             Caio
           </a>
         </h2>

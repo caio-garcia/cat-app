@@ -1,28 +1,28 @@
 @media only screen and (max-width: 400px) {
+  .navBarDiv {
+    background-color: #b6dcb6;
+    padding: 5px;
+  }
   .breeds {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* padding: 45px; */
-    margin: 20px;
-    /* background-color: #53a24f; */
-    border-radius: 12px;
-    color: #f7e5c5;
-    font-size: 1.2em;
+    padding: 35px;
+    color: black;
+    font-size: 1.1em;
+    background-color: #b6dcb6;
   }
 
   .searchBarParent {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 20px;
     /* margin: 45px; */
     /* left: 45%; */
     width: 100%;
+    padding: 15px;
     /* background-color: #325434aa; */
-    background-color: #53a24f;
-    /* padding-right: 100px; */
-    padding-right: 20px;
-    padding-bottom: 20px;
+    background-color: #b6dcb6;
   }
 
   .searchBar {
@@ -31,9 +31,10 @@
     align-items: center;
     flex-direction: column;
     gap: 5px;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: bolder;
-    /* width: 400px; */
+    background-color: #b6dcb6;
+    padding-right: 30px;
   }
 
   .searchBar input {
@@ -51,7 +52,7 @@
     justify-content: "center";
     gap: 25px;
     width: 350px;
-    margin: 15px;
+    margin: 5px;
     /* background-color: #f7e5c5; */
   }
 
@@ -60,9 +61,7 @@
     flex-direction: column;
     background-color: #f7e5c5;
     color: black;
-    gap: 5px;
     align-items: center;
-    /* margin: 15px; */
     padding: 25px;
     border: 1px solid #f7e5c5;
     border-radius: 12px;

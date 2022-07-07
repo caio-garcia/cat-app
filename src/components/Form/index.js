@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { Navbar } from "../Navbar";
 import { Footer } from "../Footer";
 import styles from "../Form/styles.module.css";
+import catLogoNavbar from "../../assets/pictures/catCatchRowCropped.png";
 
 export function Form() {
   const navigate = useNavigate();
@@ -130,8 +131,8 @@ export function Form() {
 
   return (
     <>
-      <Navbar />
-      <div>
+      <div className={styles.dataDiv}>
+        <Navbar />
         <form className={styles.dataDiv}>
           <h2>Let's find your cat. Start here!</h2>
           <label htmlFor="input-name">Name:</label>
@@ -150,18 +151,17 @@ export function Form() {
             type="text"
             required
           />
-          <div>
-            <p>Question 1: How many kids live in your home?</p>
-            <img className="questionLogo" src={q1} alt="question1-logo" />
-            <input
-              type="radio"
-              id="A"
-              name="question1"
-              value="A"
-              onChange={handleChange}
-            />
-          </div>
-            <label htmlFor="A">None</label>
+          <br></br>
+          <p>Question 1: How many kids live in your home?</p>
+          <img className={styles.questionLogo} src={q1} alt="question1-logo" />
+          <input
+            type="radio"
+            id="A"
+            name="question1"
+            value="A"
+            onChange={handleChange}
+          />
+          <label htmlFor="A">None</label>
           <input
             type="radio"
             id="B"
@@ -169,7 +169,7 @@ export function Form() {
             value="B"
             onChange={handleChange}
           />
-            <label htmlFor="B">One kid</label>
+          <label htmlFor="B">One kid</label>
           <input
             type="radio"
             id="C"
@@ -177,11 +177,12 @@ export function Form() {
             value="C"
             onChange={handleChange}
           />
-            <label htmlFor="C">Two or more kids</label>
+          <label htmlFor="C">Two or more kids</label>
           <p>
+            <br></br>
             Question 2: How often does your life change (home, work, travel)?
           </p>
-          <img className="question-logo" src={q2} alt="question2-logo" />
+          <img className={styles.questionLogo} src={q2} alt="question2-logo" />
           <input
             type="radio"
             id="A"
@@ -189,7 +190,7 @@ export function Form() {
             value="A"
             onChange={handleChange}
           />
-            <label htmlFor="A">Occasionaly</label>
+          <label htmlFor="A">Occasionaly</label>
           <input
             type="radio"
             id="B"
@@ -197,7 +198,7 @@ export function Form() {
             value="B"
             onChange={handleChange}
           />
-            <label htmlFor="B">Sometimes</label>
+          <label htmlFor="B">Sometimes</label>
           <input
             type="radio"
             id="C"
@@ -205,10 +206,10 @@ export function Form() {
             value="C"
             onChange={handleChange}
           />
-            <label htmlFor="C">Fequently</label>
-          <p>
-            Question 3: How much time do you have to spend with your cat?
-          </p>  <img className="question-logo" src={q3} alt="question3-logo" />{" "}
+          <label htmlFor="C">Fequently</label>
+          <br></br>
+          <p>Question 3: How much time do you have to spend with your cat?</p>
+          <img className={styles.questionLogo} src={q3} alt="question3-logo" />
           <input
             type="radio"
             id="A"
@@ -216,7 +217,7 @@ export function Form() {
             value="A"
             onChange={handleChange}
           />
-            <label htmlFor="A">One hour or less</label>
+          <label htmlFor="A">One hour or less</label>
           <input
             type="radio"
             id="B"
@@ -224,7 +225,7 @@ export function Form() {
             value="B"
             onChange={handleChange}
           />
-            <label htmlFor="B">Between one to two hours</label>
+          <label htmlFor="B">Between one to two hours</label>
           <input
             type="radio"
             id="C"
@@ -232,9 +233,10 @@ export function Form() {
             value="C"
             onChange={handleChange}
           />
-            <label htmlFor="C">More then two hours</label>
-          <p>Question 4: How do you usually feel when you are alone?</p> {" "}
-          <img className="question-logo" src={q4} alt="question4-logo" />{" "}
+          <label htmlFor="C">More then two hours</label>
+          <br></br>
+          <p>Question 4: How do you usually feel when you are alone?</p>
+          <img className={styles.questionLogo} src={q4} alt="question4-logo" />
           <input
             type="radio"
             id="A"
@@ -242,7 +244,7 @@ export function Form() {
             value="A"
             onChange={handleChange}
           />
-            <label htmlFor="A">I feel good</label>
+          <label htmlFor="A">I feel good</label>
           <input
             type="radio"
             id="B"
@@ -250,7 +252,7 @@ export function Form() {
             value="B"
             onChange={handleChange}
           />
-            <label htmlFor="B">I don't mind</label>
+          <label htmlFor="B">I don't mind</label>
           <input
             type="radio"
             id="C"
@@ -258,9 +260,10 @@ export function Form() {
             value="C"
             onChange={handleChange}
           />
-            <label htmlFor="C">I don't like to be alone</label>
-          <p>Question 5: What kind of environment do you prefer?</p> {" "}
-          <img className="question-logo" src={q5} alt="question5-logo" />{" "}
+          <label htmlFor="C">I don't like to be alone</label>
+          <br></br>
+          <p>Question 5: What kind of environment do you prefer?</p>
+          <img className={styles.questionLogo} src={q5} alt="question5-logo" />
           <input
             type="radio"
             id="A"
@@ -268,7 +271,7 @@ export function Form() {
             value="A"
             onChange={handleChange}
           />
-            <label htmlFor="A">Chill</label>
+          <label htmlFor="A">Chill</label>
           <input
             type="radio"
             id="B"
@@ -276,7 +279,7 @@ export function Form() {
             value="B"
             onChange={handleChange}
           />
-            <label htmlFor="B">Both</label>
+          <label htmlFor="B">Both</label>
           <input
             type="radio"
             id="C"
@@ -284,43 +287,55 @@ export function Form() {
             value="C"
             onChange={handleChange}
           />
-            <label htmlFor="C">Agitated</label>
+          <label htmlFor="C">Agitated</label>
           <div></div>
           {solved ? (
             <>
-              <h1>{form.result.name}</h1>
-
-              {form.result.image === undefined || form.result.image === {} ? (
-                <span>No image available</span>
-              ) : (
+              <div className={styles.resultsDiv}>
                 <img
-                  src={form.result.image.url}
-                  alt={form.result.name}
-                  style={{ width: "200px", "border-radius": "22px" }}
+                  className={styles.catLogoResults}
+                  src={catLogoNavbar}
+                  alt="catLogo"
                 />
-              )}
-              <h2>{form.result.temperament}</h2>
-              <p>{form.result.description}</p>
-              <button
-                className="btn btn-primary d-grid gap-2"
-                type="submit"
-                onClick={handleSubmit}
-              >
-                Send my answers
-              </button>
+                <p>Your best match is:</p>
+                <h1>{form.result.name}</h1>
+                {form.result.image === undefined || form.result.image === {} ? (
+                  <span>No image available</span>
+                ) : (
+                  <img
+                    className={styles.catResults}
+                    src={form.result.image.url}
+                    alt={form.result.name}
+                  />
+                )}
+                <h2>{form.result.temperament}</h2>
+                <p>{form.result.description}</p>
+
+                <p>Other characteristics:</p>
+                <p>Life Span: {form.result.life_span} years</p>
+                <p>Health Issues: {form.result.health_issues} (scale: 0-5)</p>
+                <p>Shedding Level: {form.result.shedding_level} (scale: 0-5)</p>
+                <button
+                  className={styles.resultsButton}
+                  type="submit"
+                  onClick={handleSubmit}
+                >
+                  Send my answers
+                </button>
+              </div>
             </>
           ) : (
             <button
-              className="button"
+              className={styles.resultsButton}
               // type="submit"
               onClick={resultCat}
             >
-              Results
+              Get Your Match!
             </button>
           )}
+          <Footer />
         </form>
       </div>
-      <Footer />
     </>
   );
 }

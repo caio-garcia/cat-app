@@ -1,7 +1,45 @@
 @media only screen and (max-width: 400px) {
-  /* body {
-    background-color: #53609d;
-  } */
+  .container {
+    background-color: #b6dcb6;
+    padding-top: 1px;
+    padding-bottom: 10px;
+  }
+  .deleteButton {
+    width: 180px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 10px;
+  }
+  .resultsButtonDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .editResultsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #f7e5c5;
+    border-radius: 12px;
+    box-shadow: 2px 5px #f7e5c5;
+    background-color: #f7e5c5;
+    margin: 15px;
+  }
+  .editResultsDiv span {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  .editResultsDiv p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    /* font-size: 20px; */
+  }
   .questionLogo {
     width: 320px;
     height: 270px;
@@ -28,8 +66,8 @@
   }
   .resultsButton {
     width: 180px;
-    height: 50px;
-    font-size: 18px;
+    height: 40px;
+    font-size: 17px;
     font-weight: bold;
     margin: 20px;
   }
@@ -63,8 +101,8 @@
     margin: 20px 15px;
     width: 260px;
   }
-  /* .resultsDiv img {
-    margin: 15px 15px;
-    width: 260px;
-  } */
+  .footerDiv {
+    background-color: #b6dcb6;
+    padding: 5px;
+  }
 }

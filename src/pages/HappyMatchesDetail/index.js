@@ -4,8 +4,13 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import q1 from "../../assets/pictures/q1.png";
 import q2 from "../../assets/pictures/q2.png";
+import q3 from "../../assets/pictures/q3.png";
+import q4 from "../../assets/pictures/q4.png";
+import q5 from "../../assets/pictures/q5.png";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
+import styles from "../HappyMatchesDetail/styles.module.css";
+import catLogoNavbar from "../../assets/pictures/catCatchRowCropped.png";
 
 export function HappyMatchesDetail() {
   const { id } = useParams();
@@ -158,38 +163,39 @@ export function HappyMatchesDetail() {
     </>
   ) : editMode ? (
     <>
-      <Navbar />
-      <div>
-        <button onClick={handleDelete}>Delete</button>
-      </div>
-      <div className="d-flex flex-column m-4">
-        <form className="d-flex flex-column">
-          <h2>This is {match.name}'s answers! </h2>
-          <label htmlFor="input-name">Name:</label>
-          <input
-            name="name"
-            onChange={handleChange}
-            value={match.name}
-            type="text"
-            required
-          />
-          <label htmlFor="input-email">Email:</label>
-          <input
-            name="email"
-            onChange={handleChange}
-            value={match.email}
-            type="text"
-            required
-          />
-          <div>
-            <p>Question 1: How many kids live in your home?</p> {" "}
-            <img
-              style={{ width: 500, height: 450, margin: 10 }}
-              className="question3-logo"
-              src={q1}
-              alt="question3-logo"
-            />{" "}
+      <div className={styles.container}>
+        <Navbar />
+        <div>
+          <button className={styles.deleteButton} onClick={handleDelete}>
+            Delete
+          </button>
+        </div>
+        <div className={styles.dataDiv}>
+          <form className={styles.dataDiv}>
+            <h2>This is {match.name}'s answers! </h2>
+            <label htmlFor="input-name">Name:</label>
+            <input
+              name="name"
+              onChange={handleChange}
+              value={match.name}
+              type="text"
+              required
+            />
+            <label htmlFor="input-email">Email:</label>
+            <input
+              name="email"
+              onChange={handleChange}
+              value={match.email}
+              type="text"
+              required
+            />
             <br></br>
+            <p>Question 1: How many kids live in your home?</p>
+            <img
+              className={styles.questionLogo}
+              src={q1}
+              alt="question1-logo"
+            />
             <input
               type="radio"
               id="A"
@@ -197,187 +203,240 @@ export function HappyMatchesDetail() {
               value="A"
               onChange={handleChange}
             />
-          </div>
-            <label htmlFor="A">None</label>
-          <input
-            type="radio"
-            id="B"
-            name="question1"
-            value="B"
-            onChange={handleChange}
-          />
-            <label htmlFor="B">One kid</label>
-          <input
-            type="radio"
-            id="C"
-            name="question1"
-            value="C"
-            onChange={handleChange}
-          />
-            <label htmlFor="C">Two or more kids</label>
-          <p>
-            Question 2: How often does your life change (home, work, travel)?
-          </p>
-           {" "}
-          <img
-            style={{ width: 500, height: 450, margin: 10 }}
-            className="question-logo"
-            src={q2}
-            alt="question2-logo"
-          />
-          <input
-            type="radio"
-            id="A"
-            name="question2"
-            value="A"
-            onChange={handleChange}
-          />
-            <label htmlFor="A">Occasionaly</label>
-          <input
-            type="radio"
-            id="B"
-            name="question2"
-            value="B"
-            onChange={handleChange}
-          />
-            <label htmlFor="B">Sometimes</label>
-          <input
-            type="radio"
-            id="C"
-            name="question2"
-            value="C"
-            onChange={handleChange}
-          />
-            <label htmlFor="C">Fequently</label>
-          <p>
-            Question 3: How much time do you have to spend with your cat?
-          </p> {" "}
-          <input
-            type="radio"
-            id="A"
-            name="question3"
-            value="A"
-            onChange={handleChange}
-          />
-            <label htmlFor="A">One hour or less</label>
-          <input
-            type="radio"
-            id="B"
-            name="question3"
-            value="B"
-            onChange={handleChange}
-          />
-            <label htmlFor="B">Between one to two hours</label>
-          <input
-            type="radio"
-            id="C"
-            name="question3"
-            value="C"
-            onChange={handleChange}
-          />
-            <label htmlFor="C">More then two hours</label>
-          <p>Question 4: How do you usually feel when you are alone?</p> {" "}
-          <input
-            type="radio"
-            id="A"
-            name="question4"
-            value="A"
-            onChange={handleChange}
-          />
-            <label htmlFor="A">I feel good</label>
-          <input
-            type="radio"
-            id="B"
-            name="question4"
-            value="B"
-            onChange={handleChange}
-          />
-            <label htmlFor="B">I don't mind</label>
-          <input
-            type="radio"
-            id="C"
-            name="question4"
-            value="C"
-            onChange={handleChange}
-          />
-            <label htmlFor="C">I don't like to be alone</label>
-          <p>Question 4: What kind of environment do you prefer?</p> {" "}
-          <input
-            type="radio"
-            id="A"
-            name="question5"
-            value="A"
-            onChange={handleChange}
-          />
-            <label htmlFor="A">Chill</label>
-          <input
-            type="radio"
-            id="B"
-            name="question5"
-            value="B"
-            onChange={handleChange}
-          />
-            <label htmlFor="B">Both</label>
-          <input
-            type="radio"
-            id="C"
-            name="question5"
-            value="C"
-            onChange={handleChange}
-          />
-            <label htmlFor="C">Agitated</label>
-          <div>
-            {solved ? (
-              <>
-                <h1>{match.result.name}</h1>
+            <label htmlFor="A">None</label>
+            <input
+              type="radio"
+              id="B"
+              name="question1"
+              value="B"
+              onChange={handleChange}
+            />
+            <label htmlFor="B">One kid</label>
+            <input
+              type="radio"
+              id="C"
+              name="question1"
+              value="C"
+              onChange={handleChange}
+            />
+            <label htmlFor="C">Two or more kids</label>
+            <br></br>
+            <p>
+              Question 2: How often does your life change (home, work, travel)?
+            </p>
+            <img
+              className={styles.questionLogo}
+              src={q2}
+              alt="question2-logo"
+            />
+            <input
+              type="radio"
+              id="A"
+              name="question2"
+              value="A"
+              onChange={handleChange}
+            />
+            <label htmlFor="A">Occasionaly</label>
+            <input
+              type="radio"
+              id="B"
+              name="question2"
+              value="B"
+              onChange={handleChange}
+            />
+            <label htmlFor="B">Sometimes</label>
+            <input
+              type="radio"
+              id="C"
+              name="question2"
+              value="C"
+              onChange={handleChange}
+            />
+            <label htmlFor="C">Fequently</label>
+            <br></br>
+            <p>Question 3: How much time do you have to spend with your cat?</p>
+            <img
+              className={styles.questionLogo}
+              src={q3}
+              alt="question3-logo"
+            />
+            <input
+              type="radio"
+              id="A"
+              name="question3"
+              value="A"
+              onChange={handleChange}
+            />
+            <label htmlFor="A">One hour or less</label>
+            <input
+              type="radio"
+              id="B"
+              name="question3"
+              value="B"
+              onChange={handleChange}
+            />
+            <label htmlFor="B">Between one to two hours</label>
+            <input
+              type="radio"
+              id="C"
+              name="question3"
+              value="C"
+              onChange={handleChange}
+            />
+            <label htmlFor="C">More then two hours</label>
+            <br></br>
+            <p>Question 4: How do you usually feel when you are alone?</p>
+            <img
+              className={styles.questionLogo}
+              src={q4}
+              alt="question4-logo"
+            />
+            <input
+              type="radio"
+              id="A"
+              name="question4"
+              value="A"
+              onChange={handleChange}
+            />
+            <label htmlFor="A">I feel good</label>
+            <input
+              type="radio"
+              id="B"
+              name="question4"
+              value="B"
+              onChange={handleChange}
+            />
+            <label htmlFor="B">I don't mind</label>
+            <input
+              type="radio"
+              id="C"
+              name="question4"
+              value="C"
+              onChange={handleChange}
+            />
+            <label htmlFor="C">I don't like to be alone</label>
+            <br></br>
+            <p>Question 5: What kind of environment do you prefer?</p>
+            <img
+              className={styles.questionLogo}
+              src={q5}
+              alt="question5-logo"
+            />
+            <input
+              type="radio"
+              id="A"
+              name="question5"
+              value="A"
+              onChange={handleChange}
+            />
+            <label htmlFor="A">Chill</label>
+            <input
+              type="radio"
+              id="B"
+              name="question5"
+              value="B"
+              onChange={handleChange}
+            />
+            <label htmlFor="B">Both</label>
+            <input
+              type="radio"
+              id="C"
+              name="question5"
+              value="C"
+              onChange={handleChange}
+            />
+            <label htmlFor="C">Agitated</label>
+            <div>
+              {solved ? (
+                <>
+                  <div className={styles.resultsDiv}>
+                    <img
+                      className={styles.catLogoResults}
+                      src={catLogoNavbar}
+                      alt="catLogo"
+                    />
+                    <p>Your best match is:</p>
+                    <h1>{match.result.name}</h1>
 
-                {match.result.image === undefined ||
-                match.result.image === {} ? (
-                  <span>No image available</span>
-                ) : (
-                  <img
-                    src={match.result.image.url}
-                    alt={match.result.name}
-                    style={{ width: "200px", "border-radius": "22px" }}
-                  />
-                )}
-                <h2>{match.result.temperament}</h2>
-                <p>{match.result.description}</p>
+                    {match.result.image === undefined ||
+                    match.result.image === {} ? (
+                      <span>No image available</span>
+                    ) : (
+                      <img
+                        className={styles.catResults}
+                        src={match.result.image.url}
+                        alt={match.result.name}
+                      />
+                    )}
+                    <h2>{match.result.temperament}</h2>
+                    <p>{match.result.description}</p>
+
+                    <p>Other characteristics:</p>
+                    <p>Life Span: {match.result.life_span} years</p>
+                    <p>
+                      Health Issues: {match.result.health_issues} (scale: 0-5)
+                    </p>
+                    <p>
+                      Shedding Level: {match.result.shedding_level} (scale: 0-5)
+                    </p>
+
+                    <button
+                      className={styles.resultsButton}
+                      type="submit"
+                      onClick={handleSubmit}
+                    >
+                      Send my answers
+                    </button>
+                  </div>
+                </>
+              ) : (
                 <button
-                  className="btn btn-primary d-grid gap-2"
-                  type="submit"
-                  onClick={handleSubmit}
+                  className={styles.resultsButton}
+                  // type="submit"
+                  onClick={resultCat}
                 >
-                  Send my answers
+                  Get Your Match!
                 </button>
-              </>
-            ) : (
-              <button
-                className="btn btn-primary d-grid gap-2"
-                // type="submit"
-                onClick={resultCat}
-              >
-                Results
-              </button>
-            )}
-          </div>
-        </form>
+              )}
+            </div>
+          </form>
+        </div>
       </div>
-      <Footer />
+      <div className={styles.container}>
+        <Footer />
+      </div>
     </>
   ) : (
     <>
-      <Navbar />
-      <div>
-        <button onClick={turnEditMode}>Edit</button>
-        <button onClick={handleDelete}>Delete</button>
+      <div className={styles.container}>
+        <Navbar />
+
+        <div className={styles.editResultsDiv}>
+          <h2>{match.name}</h2>
+          <h3>Perfect Cat: {match.result.name}</h3>
+          <img
+            className={styles.catResults}
+            src={match.result.image.url}
+            alt={match.result.name}
+          />
+          <span>
+            Perfect because: {match.result.name} is{" "}
+            {match.result.temperament.toLowerCase()}.
+          </span>
+          <p>{match.result.description}</p>
+        </div>
+        <div className={styles.resultsButtonDiv}>
+          <button className={styles.resultsButton} onClick={turnEditMode}>
+            Edit Answers
+          </button>
+          <button className={styles.resultsButton} onClick={handleDelete}>
+            Delete Match
+          </button>
+        </div>
       </div>
-      <div>
-        <h2>{match.name}</h2>
-        <h3>Perfect Cat: {match.result.name}</h3>
-        <span>Perfect because: {match.result.temperament}</span>
+      <div className={styles.footerDiv}>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
