@@ -423,6 +423,7 @@ export function HappyMatchesDetail() {
             Perfect because: {match.result.name} is{" "}
             {match.result.temperament.toLowerCase()}.
           </span>
+          <p>{match.result.description}</p>
         </div>
         <div className={styles.resultsButtonDiv}>
           <button className={styles.resultsButton} onClick={turnEditMode}>
@@ -433,7 +434,9 @@ export function HappyMatchesDetail() {
           </button>
         </div>
       </div>
-      <Footer />
+      <div className={styles.footerDiv}>
+        <Footer />
+      </div>
     </>
   );
 }

@@ -316,7 +316,7 @@ export function Form() {
                 <p>Health Issues: {form.result.health_issues} (scale: 0-5)</p>
                 <p>Shedding Level: {form.result.shedding_level} (scale: 0-5)</p>
                 <button
-                  lassName={styles.resultsButton}
+                  className={styles.resultsButton}
                   type="submit"
                   onClick={handleSubmit}
                 >
