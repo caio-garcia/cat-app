@@ -48,7 +48,7 @@ beige: #f7e5c5 */
 
   .navbar button {
     width: 80px;
-    height: 30px;
+    /* height: 30px; */
     font-size: 10px;
     font-weight: bold;
   }

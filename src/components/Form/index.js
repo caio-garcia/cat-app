@@ -29,7 +29,7 @@ export function Form() {
 
   function handleChange(event) {
     setForm({ ...form, [event.target.name]: event.target.value });
-    console.log(form);
+    // console.log(form);
   }
 
   async function handleSubmit(event) {
@@ -105,7 +105,7 @@ export function Form() {
 
   function resultCat(e) {
     e.preventDefault();
-    console.log(form);
+    // console.log(form);
     if (
       form.question1 &&
       form.question2 &&

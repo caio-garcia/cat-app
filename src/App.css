@@ -17,13 +17,13 @@ button {
   border: 1px solid #f7e5c5;
   border-radius: 12px;
   width: 100px;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 
 button:hover {
   background-color: #ea9851;
   color: #f7e5c5;
-  border: 1px solid #eb903e;
+  border: 1px solid #f7e5c5;
 }
 
 /* #efb17b */
