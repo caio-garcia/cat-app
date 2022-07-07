@@ -10,6 +10,7 @@ import { Navbar } from "../Navbar";
 import { Footer } from "../Footer";
 import styles from "../Form/styles.module.css";
 import catLogoNavbar from "../../assets/pictures/catCatchRowCropped.png";
+import { toast, Toaster } from "react-hot-toast";
 
 export function Form() {
   const navigate = useNavigate();
@@ -125,12 +126,13 @@ export function Form() {
       });
       setSolved(true);
     } else {
-      console.log("Error! You must fill in all questions!");
+      toast.error("Error! You must fill in all questions!");
     }
   }
 
   return (
     <>
+      <Toaster />
       <div className={styles.dataDiv}>
         <Navbar />
         <form className={styles.dataDiv}>
