@@ -152,7 +152,11 @@ export function Form() {
           />
           <div>
             <p>Question 1: How many kids live in your home?</p>
-            <img className="questionLogo" src={q1} alt="question1-logo" />
+            <img
+              className={styles.questionLogo}
+              src={q1}
+              alt="question1-logo"
+            />
             <input
               type="radio"
               id="A"
@@ -181,7 +185,7 @@ export function Form() {
           <p>
             Question 2: How often does your life change (home, work, travel)?
           </p>
-          <img className="question-logo" src={q2} alt="question2-logo" />
+          <img className={styles.questionLogo} src={q2} alt="question2-logo" />
           <input
             type="radio"
             id="A"
@@ -206,9 +210,12 @@ export function Form() {
             onChange={handleChange}
           />
             <label htmlFor="C">Fequently</label>
-          <p>
-            Question 3: How much time do you have to spend with your cat?
-          </p>  <img className="question-logo" src={q3} alt="question3-logo" />{" "}
+          <p>Question 3: How much time do you have to spend with your cat?</p>
+          <img
+            className={styles.questionLogo}
+            src={q3}
+            alt="question3-logo"
+          />{" "}
           <input
             type="radio"
             id="A"
@@ -234,7 +241,7 @@ export function Form() {
           />
             <label htmlFor="C">More then two hours</label>
           <p>Question 4: How do you usually feel when you are alone?</p> {" "}
-          <img className="question-logo" src={q4} alt="question4-logo" />{" "}
+          <img className={styles.questionLogo} src={q4} alt="question4-logo" />{" "}
           <input
             type="radio"
             id="A"
@@ -260,7 +267,7 @@ export function Form() {
           />
             <label htmlFor="C">I don't like to be alone</label>
           <p>Question 5: What kind of environment do you prefer?</p> {" "}
-          <img className="question-logo" src={q5} alt="question5-logo" />{" "}
+          <img className={styles.questionLogo} src={q5} alt="question5-logo" />{" "}
           <input
             type="radio"
             id="A"

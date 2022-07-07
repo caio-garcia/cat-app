@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "./styles.module.css";
+import styles from "../Breeds/styles.module.css";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
 
@@ -32,12 +32,14 @@ export function Breeds() {
     <h1>loading...</h1>
   ) : (
     <>
-      <Navbar />
+      <div className={styles.navBarDiv}>
+        <Navbar />
+      </div>
 
       <div className={styles.breeds}>
         <div className={styles.searchBarParent}>
           <div className={styles.searchBar}>
-            <label>Search</label>
+            <label>Breed Search</label>
             <input
               type="text"
               onChange={(event) => setSearch(event.target.value)}
@@ -60,7 +62,6 @@ export function Breeds() {
                     ) : (
                       <img
                         src={currentBreed.image.url}
-                        className="breed-logo"
                         alt="breed-logo"
                         // style={{ width: "auto", height: "150px" }}
                       />

@@ -16,7 +16,7 @@ export function Navbar() {
 
         <div className={styles.navbarButtons}>
           <Link to="/quiz">
-            <button>Take a quiz!</button>
+            <button>Take the quiz</button>
           </Link>
           <Link to="/breeds">
             <button>Breeds' List</button>
