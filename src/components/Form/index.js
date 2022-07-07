@@ -125,8 +125,9 @@ export function Form() {
         ),
       });
       setSolved(true);
+      toast("Nice Cat!", { icon: "😻" });
     } else {
-      toast.error("Error! You must fill in all questions!");
+      toast("Error! You must answer all questions!", { icon: "😾" });
     }
   }
 

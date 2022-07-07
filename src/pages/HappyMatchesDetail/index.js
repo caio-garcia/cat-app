@@ -167,7 +167,7 @@ export function HappyMatchesDetail() {
       <Toaster />
       <div className={styles.container}>
         <Navbar />
-        <div>
+        <div className={styles.deleteButtonContainer}>
           <button className={styles.deleteButton} onClick={handleDelete}>
             Delete
           </button>
