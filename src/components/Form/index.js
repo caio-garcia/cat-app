@@ -172,8 +172,8 @@ export function Form() {
           <br></br>
           <div className={styles.questionsContainer}>
             {questionNo === 1 && (
-              <div className={styles.dataDiv}>
-                <p>Question 1: How many kids live in your home?</p>
+              <div className={styles.dataDivQ}>
+                {/* <p>Question 1: How many kids live in your home?</p> */}
                 <img
                   className={styles.questionLogo}
                   src={q1}
