@@ -40,7 +40,7 @@ export function HappyMatchesDetail() {
 
   function handleChange(event) {
     setMatch({ ...match, [event.target.name]: event.target.value });
-    console.log(match);
+    // console.log(match);
   }
 
   async function handleSubmit(event) {
@@ -133,7 +133,7 @@ export function HappyMatchesDetail() {
 
   function resultCat(e) {
     e.preventDefault();
-    console.log(match);
+    // console.log(match);
     if (
       match.question1 &&
       match.question2 &&
@@ -172,7 +172,7 @@ export function HappyMatchesDetail() {
         </div>
         <div className={styles.dataDiv}>
           <form className={styles.dataDiv}>
-            <h2>This is {match.name}'s answers! </h2>
+            <h2>Edit {match.name}'s answers! </h2>
             <label htmlFor="input-name">Name:</label>
             <input
               name="name"

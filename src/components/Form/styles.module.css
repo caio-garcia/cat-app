@@ -1,3 +1,8 @@
+:root {
+  --boldFont: @import
+    url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap");
+}
+
 @media only screen and (max-width: 400px) {
   /* body {
     background-color: #53609d;
@@ -6,6 +11,7 @@
     width: 320px;
     height: 270px;
     border-radius: 12px;
+    margin-bottom: 15px;
   }
   .dataDiv {
     display: flex;
@@ -17,10 +23,17 @@
   }
   .dataDiv p {
     text-align: center;
+    font-size: 26px;
+    font-family: var(--boldFont);
   }
   .dataDiv h2 {
     text-align: center;
   }
+
+  .dataDiv label {
+    margin-bottom: 18px;
+  }
+
   input {
     border-radius: 12px;
     width: 300px;

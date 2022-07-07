@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import styles from "../Breeds/styles.module.css";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
@@ -46,39 +45,44 @@ export function Breeds() {
             />
           </div>
         </div>
-        <div className={styles.cardsContainer}>
-          {cats
-            .filter((currentBreed) =>
-              currentBreed.name.toLowerCase().includes(search.toLowerCase())
-            )
-            .map((currentBreed) => {
-              return (
-                <>
-                  {/* <div className={styles.cardsContainer}> */}
-                  <div key="id" className={styles.card}>
-                    {currentBreed.image === undefined ||
-                    currentBreed.image === {} ? (
-                      <span>No image available</span>
-                    ) : (
-                      <img
-                        src={currentBreed.image.url}
-                        alt="breed-logo"
-                        // style={{ width: "auto", height: "150px" }}
-                      />
-                    )}
-                    <div className="card-body">
-                      <h2 className="card-title">{currentBreed.name}</h2>
-                      <h4>{currentBreed.origin}</h4>
-                      <h4>
-                        <strong>{currentBreed.temperament}</strong>
-                      </h4>
-                      <p className="card-text">{currentBreed.description}</p>
-                    </div>
-                  </div>
-                  {/* </div> */}
-                </>
-              );
-            })}
+        <div className={styles.cardsContainer} key={Math.random().toString()}>
+          <ul style={{ listStyle: "none" }} key={Math.random().toString()}>
+            {cats
+              .filter((currentBreed) =>
+                currentBreed.name.toLowerCase().includes(search.toLowerCase())
+              )
+              .map((currentBreed) => {
+                // console.log(currentBreed.id + Math.random());
+                return (
+                  <>
+                    {/* <div className={styles.cardsContainer}> */}
+                    <li key={(currentBreed.id + Math.random()).toString()}>
+                      <div className={styles.card}>
+                        {currentBreed.image === undefined ||
+                        currentBreed.image === {} ? (
+                          <span>No image available</span>
+                        ) : (
+                          <img
+                            src={currentBreed.image.url}
+                            alt="breed-logo"
+                            // style={{ width: "auto", height: "150px" }}
+                          />
+                        )}
+                        <div>
+                          <h2>{currentBreed.name}</h2>
+                          <h4>{currentBreed.origin}</h4>
+                          <h4>
+                            <strong>{currentBreed.temperament}</strong>
+                          </h4>
+                          <p>{currentBreed.description}</p>
+                        </div>
+                      </div>
+                    </li>
+                    {/* </div> */}
+                  </>
+                );
+              })}
+          </ul>
         </div>
       </div>
       <Footer />

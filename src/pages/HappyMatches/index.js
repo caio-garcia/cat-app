@@ -40,7 +40,7 @@ export function HappyMatches() {
                   <p>{currElem.email}</p>
                   <span>
                     Cat Match:{" "}
-                    <strong style={{ "font-weight": "900" }}>
+                    <strong style={{ fontWeight: "900" }}>
                       {currElem.result.name}
                     </strong>
                   </span>
