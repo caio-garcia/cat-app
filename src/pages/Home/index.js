@@ -33,7 +33,7 @@ export function Home() {
             <img src={aboutButton} alt="aboutButtonLogo" />
           </Link>
           {/* <Link to="/about"> */}
-          <img src={ourPetsButton} alt="ourPetsButtonLogo" />
+          {/* <img src={ourPetsButton} alt="ourPetsButtonLogo" /> */}
           {/* </Link> */}
         </div>
       </div>
