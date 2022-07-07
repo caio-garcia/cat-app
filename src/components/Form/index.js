@@ -212,11 +212,10 @@ export function Form() {
               </div>
             )}
             {questionNo === 2 && (
-              <div className={styles.dataDiv}>
+              <div className={styles.dataDivQ}>
                 <p>
-                  <br></br>
-                  Question 2: How often does your life change (home, work,
-                  travel)?
+                  {/* Question 2: How often does your life change (home, work,
+                  travel)? */}
                 </p>
                 <img
                   className={styles.questionLogo}
@@ -256,12 +255,12 @@ export function Form() {
                 </div>
               </div>
             )}
-            <br></br>
+
             {questionNo === 3 && (
-              <div className={styles.dataDiv}>
-                <p>
+              <div className={styles.dataDivQ}>
+                {/* <p>
                   Question 3: How much time do you have to spend with your cat?
-                </p>
+                </p> */}
                 <img
                   className={styles.questionLogo}
                   src={q3}
@@ -300,10 +299,10 @@ export function Form() {
                 </div>
               </div>
             )}
-            <br></br>
+
             {questionNo === 4 && (
-              <div className={styles.dataDiv}>
-                <p>Question 4: How do you usually feel when you are alone?</p>
+              <div className={styles.dataDivQ}>
+                {/* <p>Question 4: How do you usually feel when you are alone?</p> */}
                 <img
                   className={styles.questionLogo}
                   src={q4}
@@ -342,10 +341,10 @@ export function Form() {
                 </div>
               </div>
             )}
-            <br></br>
+
             {questionNo === 5 && (
-              <div className={styles.dataDiv}>
-                <p>Question 5: What kind of environment do you prefer?</p>
+              <div className={styles.dataDivQ}>
+                {/* <p>Question 5: What kind of environment do you prefer?</p> */}
                 <img
                   className={styles.questionLogo}
                   src={q5}
@@ -402,7 +401,7 @@ export function Form() {
                 <p>Your best match is:</p>
                 <h1>{form.result.name}</h1>
                 {form.result.image === undefined || form.result.image === {} ? (
-                  <span>No image available</span>
+                  <span>Sorry! No image available</span>
                 ) : (
                   <img
                     className={styles.catResults}

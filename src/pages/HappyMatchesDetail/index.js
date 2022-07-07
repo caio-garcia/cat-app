@@ -209,8 +209,8 @@ export function HappyMatchesDetail() {
             <br></br>
             <div className={styles.questionsContainer}>
               {questionNo === 1 && (
-                <div className={styles.dataDiv}>
-                  <p>Question 1: How many kids live in your home?</p>
+                <div className={styles.dataDivQ}>
+                  {/* <p>Question 1: How many kids live in your home?</p> */}
                   <img
                     className={styles.questionLogo}
                     src={q1}
@@ -249,11 +249,11 @@ export function HappyMatchesDetail() {
                 </div>
               )}
               {questionNo === 2 && (
-                <div className={styles.dataDiv}>
-                  <p>
+                <div className={styles.dataDivQ}>
+                  {/* <p>
                     Question 2: How often does your life change (home, work,
                     travel)?
-                  </p>
+                  </p> */}
                   <img
                     className={styles.questionLogo}
                     src={q2}
@@ -296,11 +296,11 @@ export function HappyMatchesDetail() {
               )}
               <br></br>
               {questionNo === 3 && (
-                <div className={styles.dataDiv}>
-                  <p>
+                <div className={styles.dataDivQ}>
+                  {/* <p>
                     Question 3: How much time do you have to spend with your
                     cat?
-                  </p>
+                  </p> */}
                   <img
                     className={styles.questionLogo}
                     src={q3}
@@ -343,8 +343,8 @@ export function HappyMatchesDetail() {
               )}
               <br></br>
               {questionNo === 4 && (
-                <div className={styles.dataDiv}>
-                  <p>Question 4: How do you usually feel when you are alone?</p>
+                <div className={styles.dataDivQ}>
+                  {/* <p>Question 4: How do you usually feel when you are alone?</p> */}
                   <img
                     className={styles.questionLogo}
                     src={q4}
@@ -387,8 +387,8 @@ export function HappyMatchesDetail() {
               )}
               <br></br>
               {questionNo === 5 && (
-                <div className={styles.dataDiv}>
-                  <p>Question 5: What kind of environment do you prefer?</p>
+                <div className={styles.dataDivQ}>
+                  {/* <p>Question 5: What kind of environment do you prefer?</p> */}
                   <img
                     className={styles.questionLogo}
                     src={q5}
@@ -471,7 +471,7 @@ export function HappyMatchesDetail() {
                       </p>
 
                       <button
-                        className={styles.resultsButton}
+                        // className={styles.resultsButton}
                         type="submit"
                         onClick={handleSubmit}
                       >

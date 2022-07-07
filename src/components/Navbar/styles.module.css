@@ -3,7 +3,7 @@ laranja:#eb903e
 rose:#f7e5c5
 green: /* #b6dcb6 */
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .navbar {
     text-decoration: none;
     display: flex;
@@ -48,17 +48,65 @@ green: /* #b6dcb6 */
 
   .navbar button {
     width: 80px;
-    /* height: 30px; */
+    height: 30px;
     font-size: 10px;
     font-weight: bold;
   }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+/* @media only screen and (min-width: 481px) and (max-width: 768px) {
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
 }
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
-}
-@media only screen and (max-width: 1201px) {
+} */
+@media screen and (min-width: 481px) and (max-width: 1201px) {
+  .navbar {
+    text-decoration: none;
+    display: flex;
+    gap: 45px;
+    justify-content: space-between;
+    margin: 10px;
+    margin-bottom: 0px;
+    padding: 10px 0px;
+    border: 1px solid #f7e5c5;
+    border-radius: 12px;
+    background-color: #efb17b;
+    font-size: 0.2em;
+    box-shadow: 2px 3px #f7e5c5;
+  }
+  .navbarImages {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 80px;
+    width: 90px;
+    margin-left: 20px;
+  }
+
+  .navbar img {
+    margin: 15px;
+    margin-right: 20px;
+    width: 170px;
+    position: relative;
+    bottom: 10px;
+    right: 20px;
+  }
+  .navbarButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 30px;
+    gap: 10px;
+    font-size: 0.2em;
+    /* margin: 15px; */
+  }
+
+  .navbar button {
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+    font-weight: bold;
+  }
 }
