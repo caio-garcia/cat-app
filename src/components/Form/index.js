@@ -45,7 +45,6 @@ export function Form() {
 
   function handleChange(event) {
     setForm({ ...form, [event.target.name]: event.target.value });
-    // this.setState({ [event.target.id]: event.target.checked });
     // console.log(form);
   }
 
@@ -186,6 +185,7 @@ export function Form() {
                   name="question1"
                   value="A"
                   onChange={handleChange}
+                  checked={form.question1 === "A" ? true : false}
                 />
                 <label htmlFor="A">None</label>
                 <input
@@ -194,6 +194,7 @@ export function Form() {
                   name="question1"
                   value="B"
                   onChange={handleChange}
+                  checked={form.question1 === "B" ? true : false}
                 />
                 <label htmlFor="B">One kid</label>
                 <input
@@ -202,6 +203,7 @@ export function Form() {
                   name="question1"
                   value="C"
                   onChange={handleChange}
+                  checked={form.question1 === "C" ? true : false}
                 />
                 <label htmlFor="C">Two or more kids</label>
                 <div className={styles.questionsButtons}>
@@ -227,6 +229,7 @@ export function Form() {
                   name="question2"
                   value="A"
                   onChange={handleChange}
+                  checked={form.question2 === "A" ? true : false}
                 />
                 <label htmlFor="A">Occasionaly</label>
                 <input
@@ -235,6 +238,7 @@ export function Form() {
                   name="question2"
                   value="B"
                   onChange={handleChange}
+                  checked={form.question2 === "B" ? true : false}
                 />
                 <label htmlFor="B">Sometimes</label>
                 <input
@@ -243,6 +247,7 @@ export function Form() {
                   name="question2"
                   value="C"
                   onChange={handleChange}
+                  checked={form.question2 === "C" ? true : false}
                 />
                 <label htmlFor="C">Fequently</label>
                 <div className={styles.questionsButtons}>
@@ -268,6 +273,7 @@ export function Form() {
                   name="question3"
                   value="A"
                   onChange={handleChange}
+                  checked={form.question3 === "A" ? true : false}
                 />
                 <label htmlFor="A">One hour or less</label>
                 <input
@@ -276,6 +282,7 @@ export function Form() {
                   name="question3"
                   value="B"
                   onChange={handleChange}
+                  checked={form.question3 === "B" ? true : false}
                 />
                 <label htmlFor="B">Between one to two hours</label>
                 <input
@@ -284,6 +291,7 @@ export function Form() {
                   name="question3"
                   value="C"
                   onChange={handleChange}
+                  checked={form.question3 === "C" ? true : false}
                 />
                 <label htmlFor="C">More then two hours</label>
                 <div className={styles.questionsButtons}>
@@ -307,6 +315,7 @@ export function Form() {
                   name="question4"
                   value="A"
                   onChange={handleChange}
+                  checked={form.question4 === "A" ? true : false}
                 />
                 <label htmlFor="A">I feel good</label>
                 <input
@@ -315,6 +324,7 @@ export function Form() {
                   name="question4"
                   value="B"
                   onChange={handleChange}
+                  checked={form.question4 === "B" ? true : false}
                 />
                 <label htmlFor="B">I don't mind</label>
                 <input
@@ -323,6 +333,7 @@ export function Form() {
                   name="question4"
                   value="C"
                   onChange={handleChange}
+                  checked={form.question4 === "C" ? true : false}
                 />
                 <label htmlFor="C">I don't like to be alone</label>
                 <div className={styles.questionsButtons}>
@@ -346,6 +357,7 @@ export function Form() {
                   name="question5"
                   value="A"
                   onChange={handleChange}
+                  checked={form.question5 === "A" ? true : false}
                 />
                 <label htmlFor="A">Chill</label>
                 <input
@@ -354,6 +366,7 @@ export function Form() {
                   name="question5"
                   value="B"
                   onChange={handleChange}
+                  checked={form.question5 === "B" ? true : false}
                 />
                 <label htmlFor="B">Both</label>
                 <input
@@ -362,6 +375,7 @@ export function Form() {
                   name="question5"
                   value="C"
                   onChange={handleChange}
+                  checked={form.question5 === "C" ? true : false}
                 />
                 <label htmlFor="C">Agitated</label>
                 <div className={styles.questionsButtons}>

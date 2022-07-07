@@ -16,7 +16,7 @@
   .searchBarParent {
     position: -webkit-sticky;
     position: sticky;
-    top: 20px;
+    /* top: 20px; */
     /* margin: 45px; */
     /* left: 45%; */
     width: 100%;
@@ -40,7 +40,7 @@
   .searchBar input {
     width: 345px;
     height: 35px;
-    font-size: 1.2em;
+    font-size: 0.9em;
     border: 1px solid #f7e5c5;
     box-shadow: 2px 3px #f7e5c5;
     border-radius: 18px;
