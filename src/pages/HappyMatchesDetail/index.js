@@ -11,6 +11,7 @@ import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
 import styles from "../HappyMatchesDetail/styles.module.css";
 import catLogoNavbar from "../../assets/pictures/catCatchRowCropped.png";
+import { toast, Toaster } from "react-hot-toast";
 
 export function HappyMatchesDetail() {
   const { id } = useParams();
@@ -153,7 +154,7 @@ export function HappyMatchesDetail() {
       });
       setSolved(true);
     } else {
-      console.log("Error! You must fill in all questions!");
+      toast.error("Error! You must fill in all questions!");
     }
   }
 
@@ -163,9 +164,10 @@ export function HappyMatchesDetail() {
     </>
   ) : editMode ? (
     <>
+      <Toaster />
       <div className={styles.container}>
         <Navbar />
-        <div>
+        <div className={styles.deleteButtonContainer}>
           <button className={styles.deleteButton} onClick={handleDelete}>
             Delete
           </button>
