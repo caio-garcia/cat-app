@@ -209,11 +209,7 @@ export function Form() {
           <label htmlFor="C">Fequently</label>
           <br></br>
           <p>Question 3: How much time do you have to spend with your cat?</p>
-          <img
-            className={styles.questionLogo}
-            src={q3}
-            alt="question3-logo"
-          />{" "}
+          <img className={styles.questionLogo} src={q3} alt="question3-logo" />
           <input
             type="radio"
             id="A"
@@ -240,11 +236,7 @@ export function Form() {
           <label htmlFor="C">More then two hours</label>
           <br></br>
           <p>Question 4: How do you usually feel when you are alone?</p>
-          <img
-            className={styles.questionLogo}
-            src={q4}
-            alt="question4-logo"
-          />{" "}
+          <img className={styles.questionLogo} src={q4} alt="question4-logo" />
           <input
             type="radio"
             id="A"
@@ -270,8 +262,8 @@ export function Form() {
           />
           <label htmlFor="C">I don't like to be alone</label>
           <br></br>
-          <p>Question 5: What kind of environment do you prefer?</p> {" "}
-          <img className={styles.questionLogo} src={q5} alt="question5-logo" />{" "}
+          <p>Question 5: What kind of environment do you prefer?</p>
+          <img className={styles.questionLogo} src={q5} alt="question5-logo" />
           <input
             type="radio"
             id="A"
@@ -300,25 +292,31 @@ export function Form() {
           {solved ? (
             <>
               <div className={styles.resultsDiv}>
-                <img src={catLogoNavbar} />
-
+                <img
+                  className={styles.catLogoResults}
+                  src={catLogoNavbar}
+                  alt="catLogo"
+                />
                 <p>Your best match is:</p>
-
                 <h1>{form.result.name}</h1>
-
                 {form.result.image === undefined || form.result.image === {} ? (
                   <span>No image available</span>
                 ) : (
                   <img
+                    className={styles.catResults}
                     src={form.result.image.url}
                     alt={form.result.name}
-                    style={{ width: "200px", "border-radius": "22px" }}
                   />
                 )}
                 <h2>{form.result.temperament}</h2>
                 <p>{form.result.description}</p>
+
+                <p>Other characteristics:</p>
+                <p>Life Span: {form.result.life_span} years</p>
+                <p>Health Issues: {form.result.health_issues} (scale: 0-5)</p>
+                <p>Shedding Level: {form.result.shedding_level} (scale: 0-5)</p>
                 <button
-                  className={styles.resultsButton}
+                  lassName={styles.resultsButton}
                   type="submit"
                   onClick={handleSubmit}
                 >
