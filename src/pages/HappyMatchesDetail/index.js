@@ -10,7 +10,7 @@ import q5 from "../../assets/pictures/q5.png";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
 import styles from "../HappyMatchesDetail/styles.module.css";
-import catLogoNavbar from "../../assets/pictures/catCatchRowCropped.png";
+import catLogoNavbar from "../../assets/pictures/catCatchRowCropped (2).png";
 import { toast, Toaster } from "react-hot-toast";
 
 export function HappyMatchesDetail() {
@@ -495,7 +495,7 @@ export function HappyMatchesDetail() {
           {/* </div> */}
         </div>
       </div>
-      <div className={styles.container}>
+      <div>
         <Footer />
       </div>
     </>

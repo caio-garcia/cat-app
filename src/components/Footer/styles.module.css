@@ -28,4 +28,25 @@ beige: #f7e5c5 */
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
 } */
 @media screen and (min-width: 769px) {
+  footer {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f7e5c586;
+    box-shadow: 0.1rem 0.1rem 0.3rem #eb903e;
+    border: 1px solid #f7e5c5;
+    border-radius: 12px;
+    /* box-shadow: 2px 3px #f7e5c5; */
+    font-size: 1.2em;
+  }
+
+  footer h2 {
+    margin-left: 1.2rem;
+  }
+
+  footer span {
+    margin: 1.6rem;
+  }
 }
