@@ -493,11 +493,10 @@ export function HappyMatchesDetail() {
             </div>
           </form>
           {/* </div> */}
+          <Footer />
         </div>
       </div>
-      <div>
-        <Footer />
-      </div>
+      <div></div>
     </>
   ) : (
     <>
