@@ -5,6 +5,16 @@
     padding-bottom: 10px;
   }
 
+  .questionsContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    /* gap: 10px; */
+    /* margin-left: 30rem; */
+    /* background-color: blue; */
+  }
+
   .deleteButtonContainer {
     display: flex;
     justify-content: right;
@@ -59,7 +69,8 @@
     flex-wrap: wrap;
     gap: 10px;
     font-weight: bold;
-    height: 550px;
+    height: auto;
+    padding-bottom: 1.5rem;
     border-radius: 22px;
     background: #b6dcb6;
     box-shadow: -8px -8px 10px #a0c2a0, 8px 8px 10px #ccf6cc;
@@ -109,7 +120,9 @@
     align-items: center;
     border-radius: 12px;
     background-color: #f5be3f;
-    margin: 15px;
+    margin-top: 1rem;
+    width: 20rem;
+    padding-bottom: 1.5rem;
   }
   .resultsDiv p {
     text-align: center;
