@@ -1,10 +1,10 @@
 # Cath Your Cat
 
-This project was developed as part of [Ironhack's] (https://www.ironhack.com/en) full-time Web Development course.
+This project was developed as part of [Ironhack's](https://www.ironhack.com/en) full-time Web Development course.
 
 ## The project
 
-Cat Your Cat allows people to find out which cat breed is more suitable to their lifestyle and personal circunstances.
+_Catch Your Cat_ allows people to find out which cat breed is more suitable to their lifestyle and personal circunstances.
 
 ### CAT API
 
