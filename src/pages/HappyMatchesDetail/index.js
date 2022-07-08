@@ -7,6 +7,8 @@ import q2 from "../../assets/pictures/q2.png";
 import q3 from "../../assets/pictures/q3.png";
 import q4 from "../../assets/pictures/q4.png";
 import q5 from "../../assets/pictures/q5.png";
+import q6 from "../../assets/pictures/q6.png";
+import q7 from "../../assets/pictures/q7.png";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
 import styles from "../HappyMatchesDetail/styles.module.css";
@@ -440,7 +442,7 @@ export function HappyMatchesDetail() {
                   {/* <p>Question 6: Do you have dogs living with you?</p> */}
                   <img
                     className={styles.questionLogo}
-                    src={q5}
+                    src={q6}
                     alt="question6-logo"
                   />
                   <input
@@ -483,7 +485,7 @@ export function HappyMatchesDetail() {
                   {/* <p>Question 7: How comfortable are you with your cat's grooming habits?</p> */}
                   <img
                     className={styles.questionLogo}
-                    src={q5}
+                    src={q7}
                     alt="question7-logo"
                   />
                   <input
