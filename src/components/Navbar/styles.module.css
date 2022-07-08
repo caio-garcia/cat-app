@@ -45,7 +45,6 @@ green: /* #b6dcb6 */
     font-size: 0.2em;
     /* margin: 15px; */
   }
-
   .navbar button {
     width: 80px;
     height: 30px;
@@ -54,13 +53,7 @@ green: /* #b6dcb6 */
   }
 }
 
-/* @media only screen and (min-width: 481px) and (max-width: 768px) {
-}
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-}
-@media only screen and (min-width: 1025px) and (max-width: 1200px) {
-} */
-@media screen and (min-width: 481px) and (max-width: 1201px) {
+@media screen and (min-width: 769px) {
   .navbar {
     text-decoration: none;
     display: flex;

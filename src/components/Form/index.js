@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { Navbar } from "../Navbar";
 import { Footer } from "../Footer";
 import styles from "../Form/styles.module.css";
-import catLogoNavbar from "../../assets/pictures/catCatchRowCropped.png";
+import catLogoNavbar from "../../assets/pictures/catCatchRowCropped (2).png";
 import { toast, Toaster } from "react-hot-toast";
 
 export function Form() {
@@ -149,294 +149,308 @@ export function Form() {
   return (
     <>
       <Toaster />
-      <div className={styles.dataDiv}>
+      <div className={styles.container}>
         <Navbar />
-        <form className={styles.dataDiv}>
-          <h2>Let's find your cat. Start here!</h2>
-          <label htmlFor="input-name">Name:</label>
-          <input
-            name="name"
-            onChange={handleChange}
-            value={form.name}
-            type="text"
-            required
-          />
-          <label htmlFor="input-email">Email:</label>
-          <input
-            name="email"
-            onChange={handleChange}
-            value={form.email}
-            type="text"
-            required
-          />
-          <br></br>
-          <div className={styles.questionsContainer}>
-            {questionNo === 1 && (
-              <div className={styles.dataDivQ}>
-                {/* <p>Question 1: How many kids live in your home?</p> */}
-                <img
-                  className={styles.questionLogo}
-                  src={q1}
-                  alt="question1-logo"
-                />
-                <input
-                  type="radio"
-                  id="A"
-                  name="question1"
-                  value="A"
-                  onChange={handleChange}
-                  checked={form.question1 === "A" ? true : false}
-                />
-                <label htmlFor="A">None</label>
-                <input
-                  type="radio"
-                  id="B"
-                  name="question1"
-                  value="B"
-                  onChange={handleChange}
-                  checked={form.question1 === "B" ? true : false}
-                />
-                <label htmlFor="B">One kid</label>
-                <input
-                  type="radio"
-                  id="C"
-                  name="question1"
-                  value="C"
-                  onChange={handleChange}
-                  checked={form.question1 === "C" ? true : false}
-                />
-                <label htmlFor="C">Two or more kids</label>
-                <div className={styles.questionsButtons}>
-                  <button onClick={nextQuestion}>Next Question</button>
-                </div>
-              </div>
-            )}
-            {questionNo === 2 && (
-              <div className={styles.dataDivQ}>
-                <p>
-                  {/* Question 2: How often does your life change (home, work,
-                  travel)? */}
-                </p>
-                <img
-                  className={styles.questionLogo}
-                  src={q2}
-                  alt="question2-logo"
-                />
-                <input
-                  type="radio"
-                  id="A"
-                  name="question2"
-                  value="A"
-                  onChange={handleChange}
-                  checked={form.question2 === "A" ? true : false}
-                />
-                <label htmlFor="A">Occasionaly</label>
-                <input
-                  type="radio"
-                  id="B"
-                  name="question2"
-                  value="B"
-                  onChange={handleChange}
-                  checked={form.question2 === "B" ? true : false}
-                />
-                <label htmlFor="B">Sometimes</label>
-                <input
-                  type="radio"
-                  id="C"
-                  name="question2"
-                  value="C"
-                  onChange={handleChange}
-                  checked={form.question2 === "C" ? true : false}
-                />
-                <label htmlFor="C">Fequently</label>
-                <div className={styles.questionsButtons}>
-                  <button onClick={previousQuestion}>Previous Question</button>
-                  <button onClick={nextQuestion}>Next Question</button>
-                </div>
-              </div>
-            )}
 
-            {questionNo === 3 && (
-              <div className={styles.dataDivQ}>
-                {/* <p>
+        <div className={styles.dataDiv}>
+          <form className={styles.dataDiv}>
+            <h2>Let's find your cat. Start here!</h2>
+            <label htmlFor="input-name">Name:</label>
+            <input
+              name="name"
+              onChange={handleChange}
+              value={form.name}
+              type="text"
+              required
+            />
+            <label htmlFor="input-email">Email:</label>
+            <input
+              name="email"
+              onChange={handleChange}
+              value={form.email}
+              type="text"
+              required
+            />
+            <br></br>
+            <div className={styles.questionsContainer}>
+              {questionNo === 1 && (
+                <div className={styles.dataDivQ}>
+                  {/* <p>Question 1: How many kids live in your home?</p> */}
+                  <img
+                    className={styles.questionLogo}
+                    src={q1}
+                    alt="question1-logo"
+                  />
+                  <input
+                    type="radio"
+                    id="A"
+                    name="question1"
+                    value="A"
+                    onChange={handleChange}
+                    checked={form.question1 === "A" ? true : false}
+                  />
+                  <label htmlFor="A">None</label>
+                  <input
+                    type="radio"
+                    id="B"
+                    name="question1"
+                    value="B"
+                    onChange={handleChange}
+                    checked={form.question1 === "B" ? true : false}
+                  />
+                  <label htmlFor="B">One kid</label>
+                  <input
+                    type="radio"
+                    id="C"
+                    name="question1"
+                    value="C"
+                    onChange={handleChange}
+                    checked={form.question1 === "C" ? true : false}
+                  />
+                  <label htmlFor="C">Two or more kids</label>
+                  <div className={styles.questionsButtons}>
+                    <button onClick={nextQuestion}>Next Question</button>
+                  </div>
+                </div>
+              )}
+              {questionNo === 2 && (
+                <div className={styles.dataDivQ}>
+                  {/* <p>
+                  Question 2: How often does your life change (home, work,
+                  travel)?
+                </p> */}
+                  <img
+                    className={styles.questionLogo}
+                    src={q2}
+                    alt="question2-logo"
+                  />
+                  <input
+                    type="radio"
+                    id="A"
+                    name="question2"
+                    value="A"
+                    onChange={handleChange}
+                    checked={form.question2 === "A" ? true : false}
+                  />
+                  <label htmlFor="A">Occasionaly</label>
+                  <input
+                    type="radio"
+                    id="B"
+                    name="question2"
+                    value="B"
+                    onChange={handleChange}
+                    checked={form.question2 === "B" ? true : false}
+                  />
+                  <label htmlFor="B">Sometimes</label>
+                  <input
+                    type="radio"
+                    id="C"
+                    name="question2"
+                    value="C"
+                    onChange={handleChange}
+                    checked={form.question2 === "C" ? true : false}
+                  />
+                  <label htmlFor="C">Fequently</label>
+                  <div className={styles.questionsButtons}>
+                    <button onClick={previousQuestion}>
+                      Previous Question
+                    </button>
+                    <button onClick={nextQuestion}>Next Question</button>
+                  </div>
+                </div>
+              )}
+
+              {questionNo === 3 && (
+                <div className={styles.dataDivQ}>
+                  {/* <p>
                   Question 3: How much time do you have to spend with your cat?
                 </p> */}
-                <img
-                  className={styles.questionLogo}
-                  src={q3}
-                  alt="question3-logo"
-                />
-                <input
-                  type="radio"
-                  id="A"
-                  name="question3"
-                  value="A"
-                  onChange={handleChange}
-                  checked={form.question3 === "A" ? true : false}
-                />
-                <label htmlFor="A">One hour or less</label>
-                <input
-                  type="radio"
-                  id="B"
-                  name="question3"
-                  value="B"
-                  onChange={handleChange}
-                  checked={form.question3 === "B" ? true : false}
-                />
-                <label htmlFor="B">Between one to two hours</label>
-                <input
-                  type="radio"
-                  id="C"
-                  name="question3"
-                  value="C"
-                  onChange={handleChange}
-                  checked={form.question3 === "C" ? true : false}
-                />
-                <label htmlFor="C">More then two hours</label>
-                <div className={styles.questionsButtons}>
-                  <button onClick={previousQuestion}>Previous Question</button>
-                  <button onClick={nextQuestion}>Next Question</button>
+                  <img
+                    className={styles.questionLogo}
+                    src={q3}
+                    alt="question3-logo"
+                  />
+                  <input
+                    type="radio"
+                    id="A"
+                    name="question3"
+                    value="A"
+                    onChange={handleChange}
+                    checked={form.question3 === "A" ? true : false}
+                  />
+                  <label htmlFor="A">One hour or less</label>
+                  <input
+                    type="radio"
+                    id="B"
+                    name="question3"
+                    value="B"
+                    onChange={handleChange}
+                    checked={form.question3 === "B" ? true : false}
+                  />
+                  <label htmlFor="B">Between one to two hours</label>
+                  <input
+                    type="radio"
+                    id="C"
+                    name="question3"
+                    value="C"
+                    onChange={handleChange}
+                    checked={form.question3 === "C" ? true : false}
+                  />
+                  <label htmlFor="C">More then two hours</label>
+                  <div className={styles.questionsButtons}>
+                    <button onClick={previousQuestion}>
+                      Previous Question
+                    </button>
+                    <button onClick={nextQuestion}>Next Question</button>
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
 
-            {questionNo === 4 && (
-              <div className={styles.dataDivQ}>
-                {/* <p>Question 4: How do you usually feel when you are alone?</p> */}
-                <img
-                  className={styles.questionLogo}
-                  src={q4}
-                  alt="question4-logo"
-                />
-                <input
-                  type="radio"
-                  id="A"
-                  name="question4"
-                  value="A"
-                  onChange={handleChange}
-                  checked={form.question4 === "A" ? true : false}
-                />
-                <label htmlFor="A">I feel good</label>
-                <input
-                  type="radio"
-                  id="B"
-                  name="question4"
-                  value="B"
-                  onChange={handleChange}
-                  checked={form.question4 === "B" ? true : false}
-                />
-                <label htmlFor="B">I don't mind</label>
-                <input
-                  type="radio"
-                  id="C"
-                  name="question4"
-                  value="C"
-                  onChange={handleChange}
-                  checked={form.question4 === "C" ? true : false}
-                />
-                <label htmlFor="C">I don't like to be alone</label>
-                <div className={styles.questionsButtons}>
-                  <button onClick={previousQuestion}>Previous Question</button>
-                  <button onClick={nextQuestion}>Next Question</button>
+              {questionNo === 4 && (
+                <div className={styles.dataDivQ}>
+                  {/* <p>Question 4: How do you usually feel when you are alone?</p> */}
+                  <img
+                    className={styles.questionLogo}
+                    src={q4}
+                    alt="question4-logo"
+                  />
+                  <input
+                    type="radio"
+                    id="A"
+                    name="question4"
+                    value="A"
+                    onChange={handleChange}
+                    checked={form.question4 === "A" ? true : false}
+                  />
+                  <label htmlFor="A">I feel good</label>
+                  <input
+                    type="radio"
+                    id="B"
+                    name="question4"
+                    value="B"
+                    onChange={handleChange}
+                    checked={form.question4 === "B" ? true : false}
+                  />
+                  <label htmlFor="B">I don't mind</label>
+                  <input
+                    type="radio"
+                    id="C"
+                    name="question4"
+                    value="C"
+                    onChange={handleChange}
+                    checked={form.question4 === "C" ? true : false}
+                  />
+                  <label htmlFor="C">I don't like to be alone</label>
+                  <div className={styles.questionsButtons}>
+                    <button onClick={previousQuestion}>
+                      Previous Question
+                    </button>
+                    <button onClick={nextQuestion}>Next Question</button>
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
 
-            {questionNo === 5 && (
-              <div className={styles.dataDivQ}>
-                {/* <p>Question 5: What kind of environment do you prefer?</p> */}
-                <img
-                  className={styles.questionLogo}
-                  src={q5}
-                  alt="question5-logo"
-                />
-                <input
-                  type="radio"
-                  id="A"
-                  name="question5"
-                  value="A"
-                  onChange={handleChange}
-                  checked={form.question5 === "A" ? true : false}
-                />
-                <label htmlFor="A">Chill</label>
-                <input
-                  type="radio"
-                  id="B"
-                  name="question5"
-                  value="B"
-                  onChange={handleChange}
-                  checked={form.question5 === "B" ? true : false}
-                />
-                <label htmlFor="B">Both</label>
-                <input
-                  type="radio"
-                  id="C"
-                  name="question5"
-                  value="C"
-                  onChange={handleChange}
-                  checked={form.question5 === "C" ? true : false}
-                />
-                <label htmlFor="C">Agitated</label>
-                <div className={styles.questionsButtons}>
-                  <button onClick={previousQuestion}>Previous Question</button>
+              {questionNo === 5 && (
+                <div className={styles.dataDivQ}>
+                  {/* <p>Question 5: What kind of environment do you prefer?</p> */}
+                  <img
+                    className={styles.questionLogo}
+                    src={q5}
+                    alt="question5-logo"
+                  />
+                  <input
+                    type="radio"
+                    id="A"
+                    name="question5"
+                    value="A"
+                    onChange={handleChange}
+                    checked={form.question5 === "A" ? true : false}
+                  />
+                  <label htmlFor="A">Chill</label>
+                  <input
+                    type="radio"
+                    id="B"
+                    name="question5"
+                    value="B"
+                    onChange={handleChange}
+                    checked={form.question5 === "B" ? true : false}
+                  />
+                  <label htmlFor="B">Both</label>
+                  <input
+                    type="radio"
+                    id="C"
+                    name="question5"
+                    value="C"
+                    onChange={handleChange}
+                    checked={form.question5 === "C" ? true : false}
+                  />
+                  <label htmlFor="C">Agitated</label>
+                  <div className={styles.questionsButtons}>
+                    <button onClick={previousQuestion}>
+                      Previous Question
+                    </button>
+                    <button
+                      className={styles.resultsButton}
+                      // type="submit"
+                      onClick={resultCat}
+                    >
+                      Get Your Match!
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+            {solved ? (
+              <>
+                <div className={styles.resultsDiv}>
+                  <img
+                    className={styles.catLogoResults}
+                    src={catLogoNavbar}
+                    alt="catLogo"
+                  />
+                  <p>Your best match is:</p>
+                  <h1>{form.result.name}</h1>
+                  {form.result.image === undefined ||
+                  form.result.image === {} ? (
+                    <span>Sorry! No image available</span>
+                  ) : (
+                    <img
+                      className={styles.catResults}
+                      src={form.result.image.url}
+                      alt={form.result.name}
+                    />
+                  )}
+                  <h2>{form.result.temperament}</h2>
+                  <p>{form.result.description}</p>
+
+                  <p>Other characteristics:</p>
+                  <p>Life Span: {form.result.life_span} years</p>
+                  <p>Health Issues: {form.result.health_issues} (scale: 0-5)</p>
+                  <p>
+                    Shedding Level: {form.result.shedding_level} (scale: 0-5)
+                  </p>
                   <button
                     className={styles.resultsButton}
-                    // type="submit"
-                    onClick={resultCat}
+                    type="submit"
+                    onClick={handleSubmit}
                   >
-                    Get Your Match!
+                    Send my answers
                   </button>
                 </div>
-              </div>
+              </>
+            ) : (
+              <></>
+              // <button
+              //   className={styles.resultsButton}
+              //   // type="submit"
+              //   onClick={resultCat}
+              // >
+              //   Get Your Match!
+              // </button>
             )}
-          </div>
-          {solved ? (
-            <>
-              <div className={styles.resultsDiv}>
-                <img
-                  className={styles.catLogoResults}
-                  src={catLogoNavbar}
-                  alt="catLogo"
-                />
-                <p>Your best match is:</p>
-                <h1>{form.result.name}</h1>
-                {form.result.image === undefined || form.result.image === {} ? (
-                  <span>Sorry! No image available</span>
-                ) : (
-                  <img
-                    className={styles.catResults}
-                    src={form.result.image.url}
-                    alt={form.result.name}
-                  />
-                )}
-                <h2>{form.result.temperament}</h2>
-                <p>{form.result.description}</p>
-
-                <p>Other characteristics:</p>
-                <p>Life Span: {form.result.life_span} years</p>
-                <p>Health Issues: {form.result.health_issues} (scale: 0-5)</p>
-                <p>Shedding Level: {form.result.shedding_level} (scale: 0-5)</p>
-                <button
-                  className={styles.resultsButton}
-                  type="submit"
-                  onClick={handleSubmit}
-                >
-                  Send my answers
-                </button>
-              </div>
-            </>
-          ) : (
-            <></>
-            // <button
-            //   className={styles.resultsButton}
-            //   // type="submit"
-            //   onClick={resultCat}
-            // >
-            //   Get Your Match!
-            // </button>
-          )}
-          <Footer />
-        </form>
+          </form>
+        </div>
+        <Footer />
       </div>
     </>
   );

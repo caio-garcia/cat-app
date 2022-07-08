@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
-import catLogoNavbar from "../../assets/pictures/catCatchRowCropped.png";
+import catLogoNavbar from "../../assets/pictures/catCatchRowCropped (2).png";
 // import logo from "../../assets/pictures/CatchYourCatBlack(1080 × 768 px) (5).png";
 
 export function Navbar() {
