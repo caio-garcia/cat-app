@@ -27,7 +27,7 @@ The project's CRUD schema is mainly based on the consumption of data (GET) from 
 
 [Netlify deployment](https://catchyourcat.netlify.app/)
 
-[Quick project presentation]()
+[Quick project presentation](https://www.canva.com/design/DAFFylZSH6o/pBlWW7DG9VKVOWEVpGXghg/view?utm_content=DAFFylZSH6o&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent)
 
 [Caio Linkedin](https://www.linkedin.com/in/caiopgarcia/)
 [Tathy Linkedin](https://www.linkedin.com/in/tathyanna-maximiano/)
