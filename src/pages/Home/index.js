@@ -16,7 +16,7 @@ export function Home() {
       <div className={styles.teste}>
         <div className={styles.catLogoDiv}>
           <img src={catHome} alt="catLogo" />
-          <img src={stars} alt="starsLogo" />
+          {/* <img src={stars} alt="starsLogo" /> */}
         </div>
         <div className={styles.logoButton}>
           <div className={styles.logoDiv}>

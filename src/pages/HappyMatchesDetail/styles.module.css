@@ -89,7 +89,6 @@
     font-size: 17px;
     font-weight: bold;
     /* margin: 20px; */
-
     font-weight: bold;
     border-radius: 12px;
     background: linear-gradient(145deg, #fff5d3, #deceb1);
@@ -143,5 +142,140 @@
 }
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
 } */
-@media screen and (min-width: 481px) and (max-width: 1201px) {
+@media screen and (min-width: 769px) {
+  .container {
+    background-color: #b6dcb6;
+    padding-top: 1px;
+    padding-bottom: 10px;
+  }
+
+  .deleteButtonContainer {
+    display: flex;
+    justify-content: right;
+    margin-right: 25px;
+  }
+  .deleteButton {
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+  }
+  .resultsButtonDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .editResultsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #f7e5c5;
+    border-radius: 12px;
+    box-shadow: 2px 5px #f7e5c5;
+    background-color: #f7e5c5;
+    margin: 15px;
+  }
+  .editResultsDiv span {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  .editResultsDiv p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    /* font-size: 20px; */
+  }
+  .questionLogo {
+    width: 320px;
+    height: 270px;
+    border-radius: 12px;
+  }
+  .dataDivQ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-weight: bold;
+    height: 550px;
+    border-radius: 22px;
+    background: #b6dcb6;
+    box-shadow: -8px -8px 10px #a0c2a0, 8px 8px 10px #ccf6cc;
+    margin-top: 10px;
+  }
+  .dataDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+    background-color: #b6dcb6;
+  }
+  .dataDiv p {
+    text-align: center;
+  }
+  .dataDiv h2 {
+    text-align: center;
+  }
+  input {
+    border-radius: 12px;
+    width: 300px;
+    height: 25px;
+  }
+  .resultsButton {
+    /* width: 180px;
+    height: 40px; */
+    font-size: 17px;
+    font-weight: bold;
+    /* margin: 20px; */
+    font-weight: bold;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #fff5d3, #deceb1);
+    box-shadow: 5px 5px 0px #f5e3c3, -5px -5px 0px #f9e7c7;
+    /* margin: 20px; */
+  }
+  .resultsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #f5be3f;
+    margin: 15px;
+  }
+  .resultsDiv p {
+    text-align: center;
+    margin: 5px 15px 0px 15px;
+  }
+  .resultsDiv h2 {
+    text-align: center;
+    margin: 0px 15px 5px 15px;
+  }
+  .resultsDiv h1 {
+    text-align: center;
+    margin: 0px 15px 0px 15px;
+  }
+  .catResults {
+    margin: 15px 15px;
+    width: 200px;
+    height: auto;
+    border-radius: 22px;
+  }
+  .catLogoResults {
+    margin: 20px 15px;
+    width: 260px;
+  }
+  .footerDiv {
+    background-color: #b6dcb6;
+    padding: 5px;
+  }
+  .questionsButtons {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+  }
 }
