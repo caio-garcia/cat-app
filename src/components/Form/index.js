@@ -449,10 +449,10 @@ export function Form() {
               )}
               {questionNo === 7 && (
                 <div className={styles.dataDivQ}>
-                  <p>
+                  {/* <p>
                     Question 7: How comfortable are you with your cat's grooming
                     habits?
-                  </p>
+                  </p> */}
                   <img
                     className={styles.questionLogo}
                     src={q5}

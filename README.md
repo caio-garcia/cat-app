@@ -31,3 +31,11 @@ The project's CRUD schema is mainly based on the consumption of data (GET) from 
 
 [Caio Linkedin](https://www.linkedin.com/in/caiopgarcia/)
 [Tathy Linkedin](https://www.linkedin.com/in/tathyanna-maximiano/)
+
+## Next Releases:
+
+1. Cats attributes in the match details and breeds list (by star-levels);
+2. Send match via e-mail;
+3. List top5 cats on match;
+4. Least likely cat;
+5. Transform radio buttons on Form and MatchDetails;
