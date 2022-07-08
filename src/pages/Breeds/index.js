@@ -46,7 +46,7 @@ export function Breeds() {
           </div>
         </div>
         <div className={styles.cardsContainer} key={Math.random().toString()}>
-          <ul style={{ listStyle: "none" }} key={Math.random().toString()}>
+          <ul key={Math.random().toString()}>
             {cats
               .filter((currentBreed) =>
                 currentBreed.name.toLowerCase().includes(search.toLowerCase())

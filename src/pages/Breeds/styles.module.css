@@ -82,5 +82,90 @@
 }
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
 } */
-@media screen and (min-width: 481px) and (max-width: 1201px) {
+@media screen and (min-width: 769px) {
+  .navBarDiv {
+    background-color: #b6dcb6;
+    padding: 0.5rem;
+  }
+  .breeds {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 2rem;
+    color: black;
+    font-size: 1.3rem;
+    background-color: #b6dcb6;
+  }
+
+  .searchBarParent {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0.01rem;
+    /* margin: 45px; */
+    left: 45%;
+    width: 100%;
+    padding: 15px;
+    /* background-color: #325434aa; */
+    background-color: #b6dcb6;
+  }
+
+  .searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    background-color: #b6dcb6;
+    padding-right: 30px;
+  }
+
+  .searchBar input {
+    width: 21.5rem;
+    height: 2.2rem;
+    font-size: 1.9rem;
+    border: 0.1rem solid #f7e5c5;
+    box-shadow: 0.1rem 0.2rem #f7e5c5;
+    border-radius: 1.5rem;
+  }
+
+  .cardsContainer {
+    /* display: "flex";
+    flex-direction: "column";
+    justify-content: space-between; */
+    /* align-items: center; */
+    /* gap: 25px; */
+    /* width: 350px; */
+    margin: 3rem;
+    /* background-color: #f7e5c5; */
+  }
+
+  .cardsContainer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7e5c5;
+    color: black;
+    align-items: center;
+    padding: 25px;
+    border: 1px solid #f7e5c5;
+    border-radius: 12px;
+    box-shadow: 2px 3px #f7e5c5;
+    margin-bottom: 45px;
+    margin-right: 35px;
+  }
+
+  .card img {
+    width: 15rem;
+    border-radius: 1.6rem;
+  }
 }

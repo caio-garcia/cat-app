@@ -27,3 +27,20 @@ button:hover {
 }
 
 /* #efb17b */
+
+@media screen and (min-width: 769px) {
+  button {
+    background-color: #f7e5c5;
+    color: black;
+    border: 1px solid #f7e5c5;
+    width: 300px;
+    border-radius: 12px;
+    /* letter-spacing: 1px; */
+  }
+
+  button:hover {
+    background-color: #ea9851;
+    color: #f7e5c5;
+    border: 1px solid #f7e5c5;
+  }
+}
