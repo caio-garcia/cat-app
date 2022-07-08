@@ -53,6 +53,12 @@ export function APISearch(q1, q2, q3, q4, q5) {
   let att5 = "energy_level";
   filterCats("C", att5);
 
+  let att6 = "dog_friendly";
+  filterCats("C", att6);
+
+  let att7 = "grooming";
+  filterCats("B", att7);
+
   // const result = filteredCats[Math.floor(Math.random() * filteredCats.length)];
   // console.log(result.image);
 

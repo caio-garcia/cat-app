@@ -39,3 +39,11 @@ Pergunta 5) Voce prefere lugares mais: -> "energy_level"
 calmo (low)
 both (medium)
 agitado (high)
+
+                    <button
+                      className={styles.resultsButton}
+                      // type="submit"
+                      onClick={resultCat}
+                    >
+                      Get Your Match!
+                    </button>
