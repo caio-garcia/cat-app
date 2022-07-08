@@ -27,7 +27,7 @@ export function HappyMatchesDetail() {
   const [questionNo, setQuestionNo] = useState(1);
 
   function nextQuestion() {
-    if (questionNo === 5) {
+    if (questionNo === 7) {
       return;
     }
     setQuestionNo(questionNo + 1);
@@ -112,7 +112,7 @@ export function HappyMatchesDetail() {
   //************** */
   //API Search
   //************** */
-  function APISearch1(q1, q2, q3, q4, q5) {
+  function APISearch1(q1, q2, q3, q4, q5, q6, q7) {
     //filtering out the cats
 
     let filteredCats = [...catsBreeds];
@@ -140,6 +140,8 @@ export function HappyMatchesDetail() {
     filterCats(q4, att4);
     let att5 = "energy_level";
     filterCats(q5, att5);
+    let att6 = "dog_friendly";
+    filterCats(q6, att6);
 
     const resultado =
       filteredCats[Math.floor(Math.random() * filteredCats.length)];
@@ -155,7 +157,9 @@ export function HappyMatchesDetail() {
       match.question2 &&
       match.question3 &&
       match.question4 &&
-      match.question5
+      match.question5 &&
+      match.question6 &&
+      match.question7
     ) {
       setMatch({
         ...match,
@@ -164,7 +168,9 @@ export function HappyMatchesDetail() {
           match.question2,
           match.question3,
           match.question4,
-          match.question5
+          match.question5,
+          match.question6,
+          match.question7
         ),
       });
       setSolved(true);
@@ -421,6 +427,94 @@ export function HappyMatchesDetail() {
                     checked={match.question5 === "C" ? true : false}
                   />
                   <label htmlFor="C">Agitated</label>
+                  <div className={styles.questionsButtons}>
+                    <button onClick={previousQuestion}>
+                      Previous Question
+                    </button>
+                    <button onClick={nextQuestion}>Next Question</button>
+                  </div>
+                </div>
+              )}
+              {questionNo === 6 && (
+                <div className={styles.dataDivQ}>
+                  {/* <p>Question 6: Do you have dogs living with you?</p> */}
+                  <img
+                    className={styles.questionLogo}
+                    src={q5}
+                    alt="question6-logo"
+                  />
+                  <input
+                    type="radio"
+                    id="A"
+                    name="question6"
+                    value="A"
+                    onChange={handleChange}
+                    checked={match.question6 === "A" ? true : false}
+                  />
+                  <label htmlFor="A">None</label>
+                  <input
+                    type="radio"
+                    id="B"
+                    name="question6"
+                    value="B"
+                    onChange={handleChange}
+                    checked={match.question6 === "B" ? true : false}
+                  />
+                  <label htmlFor="B">1 - 2 dogs</label>
+                  <input
+                    type="radio"
+                    id="C"
+                    name="question6"
+                    value="C"
+                    onChange={handleChange}
+                    checked={match.question6 === "C" ? true : false}
+                  />
+                  <label htmlFor="C">2+ dogs</label>
+                  <div className={styles.questionsButtons}>
+                    <button onClick={previousQuestion}>
+                      Previous Question
+                    </button>
+                    <button onClick={nextQuestion}>Next Question</button>
+                  </div>
+                </div>
+              )}
+              {questionNo === 7 && (
+                <div className={styles.dataDivQ}>
+                  {/* <p>Question 7: How comfortable are you with your cat's grooming habits?</p> */}
+                  <img
+                    className={styles.questionLogo}
+                    src={q5}
+                    alt="question7-logo"
+                  />
+                  <input
+                    type="radio"
+                    id="A"
+                    name="question7"
+                    value="A"
+                    onChange={handleChange}
+                    checked={match.question7 === "A" ? true : false}
+                  />
+                  <label htmlFor="A">I don't mind.</label>
+                  <input
+                    type="radio"
+                    id="B"
+                    name="question7"
+                    value="B"
+                    onChange={handleChange}
+                    checked={match.question7 === "B" ? true : false}
+                  />
+                  <label htmlFor="B">
+                    A little bit of grooming isn't that bad
+                  </label>
+                  <input
+                    type="radio"
+                    id="C"
+                    name="question7"
+                    value="B"
+                    onChange={handleChange}
+                    checked={match.question7 === "B" ? true : false}
+                  />
+                  <label htmlFor="C">I'd prefer a tidy and groomed cat</label>
                   <div className={styles.questionsButtons}>
                     <button onClick={previousQuestion}>
                       Previous Question
