@@ -1,4 +1,4 @@
-# Cath Your Cat
+# Catch Your Cat
 
 This project was developed as part of [Ironhack's](https://www.ironhack.com/en) full-time Web Development course.
 
