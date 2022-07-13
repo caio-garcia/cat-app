@@ -29,6 +29,7 @@ verde claro: #b6dcb6; */
     background: #b6dcb6;
     box-shadow: -8px -8px 10px #a0c2a0, 8px 8px 10px #ccf6cc;
     margin-top: 10px;
+    height: 600px;
   }
   .dataDiv {
     display: flex;
